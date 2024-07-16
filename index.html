@@ -9,11 +9,13 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css"/>
 	<link rel="stylesheet" type="text/css" href="utils/cssReset.css"/>
   <link rel="stylesheet" type="text/css" href="utils/css_layout.css"/>
-	<title>Prof. Junwei Liang / 梁俊卫</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+	<title>Jin Yang / 杨进</title>
   <!-- 搜索引擎优化stuff -->
 	<meta name="description"
-    content="Academic website for Junwei Liang. Dr. Junwei Liang is currently a tenure-track Assistant Professor at The Hong Kong University of Science and Technology (Guangzhou). He is also an affiliate assistant professor at HKUST computer science & engineering department. He was a senior researcher at Tencent Youtu Lab working on cutting-edge computer vision research and applications. Prior to that, he received his Ph.D. degree from Carnegie Mellon University, working with Prof. Alexander Hauptmann. He is the recipient of Baidu Scholarship and Yahoo Fellowship, and awarded Rising Star Award at the World AI Conference in 2020. He is the winner of several public safety video analysis competitions, including ASAPS and TRECVID ActEV. His work has helped and been reported by major news agencies like the Washington Post and New York Times. His research interests include human trajectory forecasting, action recognition, and large-scale computer vision and video analytics in general. His mission: develop AI technologies for social good.">
-	<meta name="keywords" content="Junwei Liang,CMU,HKUST,HKUST-GZ,Professor,computer vision,PhD,梁俊卫,Carnegie Mellon University,The Hong Kong University of Science and Technology">
+    content="Academic website for Jin Yang. Jin Yang is currently pursuing his Ph.D. degree with the Institute of Artificial Intelligence and Robotics at Xi'an Jiaotong University. He received the M.S. degrees from Huazhong University of Science and Technology.">
+	<meta name="keywords" content="Jin Yang,XJTU,HUST,TGU,Ph.D. Student,computer vision,multimodal learning,杨进">
 
 	<!-- Global site tag (gtag.js) - Google Analytics/ no use after 06/2024 -->
   <!--
@@ -29,147 +31,445 @@
 -->
 
 </head>
+
+<style type="text/css">
+  div h2 a {
+    text-decoration: none !important;
+  }
+
+  div h2 a:hover {
+      text-decoration: underline !important;
+  }
+
+  #main{
+    background: #f7f7f7;
+  }
+  #main > div.publications > ol > li{
+    background: white;
+    box-shadow: 2px 5px 5px #c9c9c9;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  #main div.img{
+    padding: 20px;
+    text-align: center;
+    padding-right: 150px;
+  }
+  .text-block {
+    text-align: justify;
+    /* text-indent: 20px; 缩进 */
+    /* color: #3939398d; 设置字体颜色为深灰色 */
+    /* max-width: 600px; 设置最大宽度 */
+    margin: 0 auto; /* 自动居中 */
+  }
+</style>
+<!-- 
+<style>
+  .icon-link {
+    text-decoration: none;
+    /* color: inherit; 继承父元素的文字颜色 */
+    /* color: #ffffff;
+    font-size: 11px; */
+  }
+  .text-block {
+    text-align: justify;
+    /* text-indent: 20px; 缩进 */
+    /* color: #3939398d; 设置字体颜色为深灰色 */
+    /* max-width: 600px; 设置最大宽度 */
+    margin: 0 auto; /* 自动居中 */
+  }
+</style> -->
+
 <body>
 <div id="sidebar">
-  <img class='me' src="resources/me.jpeg"></img>
+  <img class='me' src="resources/me.jpg"  style="width: 400px; height: auto;"></img>
   <br/>
   <div class="info">
-    <h2 class="name">Prof. Junwei Liang</h2>
-    <h2 class="name_chinese">梁俊卫</h2>
-    <h2 class="email">junweiliang1114@gmail.com</h2>
-    <h2 class="email">junweiliang@hkust-gz.edu.cn</h2>
-    <h2 class="email">HKUST (Guangzhou) / HKUST</h2>
-    <h2 class="email">Office: E4-304</h2>
+    <h2 class="name">Ph.D. Student Jin Yang</h2>
+    <h2 class="name_chinese">杨进</h2>
     <h2 class="link">
-      <a style="font-size: 14px; color: yellow; font-weight: bold;" href="https://scholar.google.com/citations?hl=en&user=bMedjfUAAAAJ">Google Scholar</a>
-    </h2>
+      <a href="mailto:jin.y.hust@gmail.com">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 48 48">
+          <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"></path><path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"></path><polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"></polygon><path fill="#c62828" d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z"></path><path fill="#fbc02d" d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z"></path>
+          </svg>Email</a>
+      <a href="https://scholar.google.com/citations?hl=en&user=bMedjfUAAAAJ">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 48 48">
+          <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"></path><path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"></path><path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"></path><path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"></path>
+        </svg>Google Scholar</a>
+    </h2> 
     <h2 class="link">
-      <a href="https://www.semanticscholar.org/author/Junwei-Liang/1915796">[Semantic Scholar]</a>
-      <a href="https://www.researchgate.net/profile/Junwei_Liang3">[Research Gate]</a>
-    </h2>
-    <h2 class="link">
-      <a href="https://github.com/JunweiLiang">[Github]</a>
-      <a href="https://www.linkedin.com/in/junweiliang/">[LinkedIn]</a>
-      <a href="https://www.youtube.com/channel/UC-z7ZWp8Rbu2xhxnbAL_bRQ">[Youtube]</a>
-    </h2>
-    <h2 class="link">
-      <a href="https://www.zhihu.com/people/junwei-liang-50">[知乎]</a>
-      <a href="https://www.xiaohongshu.com/user/profile/62c3a783000000001b02b099">[小红书]</a>
-      <a href="https://twitter.com/JunweilLiang">[Twitter]</a>
-    </h2>
-
-    <!--
-    <a class="quickLink" href="https://medium.com/@junweil">
-      <img class='medium' style="" src="resources/medium.png"></img>
-    </a>
-    <a class="quickLink" href="https://dblp.org/pers/hd/l/Liang_0001:Junwei">
-      <img class='dblp' style="height:20px" src="resources/dblp.png"></img>
-    </a>
-    <a class="quickLink" href="http://aminer.cn/profile/junwei-liang/562cb48c45cedb3398c9e13b">
-      <img class='aminer' style="height:20px;width: 50px;margin-top:4px" src="resources/aminer.png"></img>
-    </a>
-    <a class="quickLink" href="https://g.co/kgs/gTWf5W">
-      <img class='aminer' name="Google knowledge graph" style="height:30px;width: 30px;margin-top:0px" src="resources/gkg.png"></img>
-    </a>-->
+      <a href="https://github.com/EdenGabriel">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0 0 100 100">
+          <path fill="#f1bc19" d="M77 12A1 1 0 1 0 77 14A1 1 0 1 0 77 12Z"></path><path fill="#e4e4f9" d="M50 13A37 37 0 1 0 50 87A37 37 0 1 0 50 13Z"></path><path fill="#f1bc19" d="M83 11A4 4 0 1 0 83 19A4 4 0 1 0 83 11Z"></path><path fill="#8889b9" d="M87 22A2 2 0 1 0 87 26A2 2 0 1 0 87 22Z"></path><path fill="#fbcd59" d="M81 74A2 2 0 1 0 81 78 2 2 0 1 0 81 74zM15 59A4 4 0 1 0 15 67 4 4 0 1 0 15 59z"></path><path fill="#8889b9" d="M25 85A2 2 0 1 0 25 89A2 2 0 1 0 25 85Z"></path><path fill="#fff" d="M18.5 49A2.5 2.5 0 1 0 18.5 54 2.5 2.5 0 1 0 18.5 49zM79.5 32A1.5 1.5 0 1 0 79.5 35 1.5 1.5 0 1 0 79.5 32z"></path><g><path fill="#a3a3cd" d="M50 25.625A24.25 24.25 0 1 0 50 74.125A24.25 24.25 0 1 0 50 25.625Z"></path><path fill="#472b29" d="M50,74.825c-13.757,0-24.95-11.192-24.95-24.95S36.243,24.925,50,24.925s24.95,11.192,24.95,24.95 S63.757,74.825,50,74.825z M50,26.325c-12.985,0-23.55,10.564-23.55,23.55S37.015,73.425,50,73.425s23.55-10.564,23.55-23.55 S62.985,26.325,50,26.325z"></path></g><g><path fill="#565fa1" d="M50 29.167A20.5 20.5 0 1 0 50 70.167A20.5 20.5 0 1 0 50 29.167Z"></path></g><g><path fill="#472b29" d="M69.424,44.625c-0.214,0-0.412-0.139-0.478-0.354c-0.088-0.287-0.183-0.571-0.284-0.853 c-0.392-1.094-0.886-2.159-1.47-3.169c-0.139-0.238-0.057-0.545,0.182-0.683c0.239-0.141,0.545-0.057,0.683,0.183 c0.614,1.061,1.134,2.182,1.546,3.331c0.106,0.297,0.206,0.595,0.298,0.897c0.081,0.264-0.067,0.544-0.332,0.625 C69.521,44.618,69.472,44.625,69.424,44.625z"></path></g><g><path fill="#472b29" d="M50,70.75c-11.511,0-20.875-9.337-20.875-20.813S38.489,29.125,50,29.125 c5.975,0,11.674,2.56,15.636,7.023c0.299,0.337,0.588,0.685,0.865,1.041c0.169,0.218,0.13,0.531-0.087,0.701 c-0.218,0.171-0.532,0.131-0.702-0.088c-0.264-0.339-0.54-0.669-0.824-0.99c-3.772-4.25-9.199-6.688-14.888-6.688 c-10.959,0-19.875,8.888-19.875,19.813S39.041,69.75,50,69.75s19.875-8.888,19.875-19.813c0-0.995-0.075-1.996-0.222-2.973 c-0.041-0.272,0.147-0.527,0.42-0.568c0.278-0.045,0.528,0.147,0.569,0.42c0.154,1.025,0.233,2.076,0.233,3.121 C70.875,61.413,61.511,70.75,50,70.75z"></path></g><g><path fill="#fefdef" d="M61.496,42.088c0.365-1.671,0.206-3.743-0.486-5.818c-3.622,0-6.339,2.716-6.339,2.716 s0.016,0.018,0.02,0.023C54.627,39.008,54.565,39,54.5,39h-9c-0.043,0-0.085,0.006-0.128,0.006c0.003-0.004,0.017-0.02,0.017-0.02 s-2.717-2.716-6.339-2.716c-0.684,2.053-0.85,4.104-0.5,5.767C36.973,43.732,36,46,36,48.5c0,5.247,4.253,9.5,9.5,9.5h1.073 c-1.304,0.709-2.246,1.979-2.493,3.498c-1.72,0.232-3.979,0.18-5.028-1.394c-1.811-2.717-2.717-2.717-3.622-2.717 s-0.906,0.906,0,1.811c0.906,0.906,0.906,0.906,1.811,2.717c0.772,1.543,2.812,3.298,6.76,2.663v3.523 c0,0.447,0.079,0.871,0.191,1.282c2.425,0.577,6.502,1.061,11.665-0.151C55.943,68.868,56,68.493,56,68.102v-5.816 c0-1.858-1.047-3.456-2.573-4.286H54.5c5.247,0,9.5-4.253,9.5-9.5C64,46.025,63.046,43.779,61.496,42.088z"></path><path fill="#472b29" d="M49.532,70.486c-2.23,0-4.075-0.287-5.457-0.616c-0.178-0.042-0.319-0.179-0.367-0.355 c-0.142-0.522-0.208-0.972-0.208-1.413V65.15c-4.563,0.514-6.279-2.154-6.707-3.011c-0.87-1.739-0.87-1.739-1.717-2.587 c-0.701-0.701-0.979-1.458-0.745-2.023c0.169-0.408,0.569-0.642,1.098-0.642c1.217,0,2.219,0.211,4.038,2.939 c0.839,1.258,2.676,1.379,4.193,1.218c0.23-0.978,0.724-1.855,1.423-2.554C39.762,58.272,35.5,53.875,35.5,48.5 c0-2.442,0.891-4.78,2.513-6.613c-0.306-1.722-0.108-3.761,0.564-5.775c0.068-0.204,0.259-0.342,0.474-0.342 c3.357,0,5.931,2.16,6.552,2.73h8.854c0.621-0.57,3.195-2.73,6.552-2.73c0.215,0,0.406,0.138,0.474,0.342 c0.679,2.037,0.872,4.096,0.551,5.83c1.591,1.826,2.465,4.146,2.465,6.559c0,5.375-4.263,9.773-9.585,9.991 c1.001,0.997,1.585,2.354,1.585,3.794v5.816c0,0.392-0.052,0.8-0.158,1.246c-0.043,0.185-0.188,0.328-0.372,0.371 C53.582,70.28,51.419,70.486,49.532,70.486z M44.602,68.965c2.412,0.537,6.153,0.9,10.83-0.148 c0.045-0.253,0.068-0.489,0.068-0.715v-5.816c0-1.597-0.886-3.07-2.312-3.846c-0.201-0.109-0.302-0.341-0.246-0.563 c0.056-0.222,0.256-0.377,0.484-0.377H54.5c4.962,0,9-4.037,9-9c0-2.247-0.843-4.404-2.373-6.074 c-0.11-0.12-0.154-0.286-0.12-0.444c0.331-1.517,0.202-3.352-0.36-5.202c-2.87,0.153-5.098,2.074-5.542,2.484 c-0.091,0.151-0.245,0.246-0.429,0.246c-0.007,0-0.096-0.006-0.103-0.006L45.5,39.5c-0.152,0-0.332-0.067-0.442-0.181l-0.021,0.021 c-0.025-0.024-2.438-2.39-5.623-2.561c-0.557,1.831-0.69,3.649-0.373,5.154c0.034,0.159-0.013,0.325-0.124,0.444 C37.358,44.052,36.5,46.227,36.5,48.5c0,4.963,4.038,9,9,9h1.073c0.229,0,0.428,0.155,0.484,0.377 c0.057,0.222-0.044,0.453-0.246,0.563c-1.205,0.654-2.021,1.799-2.238,3.139c-0.036,0.218-0.208,0.386-0.427,0.415 c-2.664,0.358-4.568-0.198-5.511-1.611c-1.663-2.494-2.412-2.494-3.206-2.494c-0.137,0-0.18,0.032-0.181,0.032 c-0.025,0.064,0.043,0.435,0.534,0.926c0.963,0.963,0.998,1.033,1.905,2.847c0.369,0.736,1.911,3.093,6.233,2.392 c0.147-0.021,0.292,0.019,0.404,0.113c0.111,0.096,0.176,0.234,0.176,0.381v3.523C44.5,68.372,44.533,68.651,44.602,68.965z"></path></g><g><path fill="#fefdef" d="M60.437,51.362c-0.9,1.994-2.876,3.652-6.354,3.93"></path><path fill="#472b29" d="M54.083,55.542c-0.129,0-0.238-0.1-0.249-0.23c-0.011-0.138,0.091-0.258,0.229-0.269 c3.805-0.305,5.442-2.227,6.146-3.784c0.058-0.127,0.205-0.183,0.331-0.125c0.125,0.057,0.182,0.204,0.125,0.33 c-1.073,2.377-3.403,3.824-6.562,4.077C54.097,55.542,54.09,55.542,54.083,55.542z"></path></g><g><path fill="#fefdef" d="M60.959,47.41c0.111,0.753,0.109,1.552-0.03,2.342"></path><path fill="#472b29" d="M60.93,50.002c-0.015,0-0.029-0.001-0.044-0.004c-0.136-0.023-0.227-0.153-0.203-0.289 c0.129-0.734,0.139-1.517,0.029-2.263c-0.021-0.136,0.074-0.264,0.21-0.283c0.137-0.02,0.264,0.073,0.284,0.211 c0.12,0.809,0.109,1.624-0.031,2.421C61.155,49.917,61.049,50.002,60.93,50.002z"></path></g><g><path fill="#fefdef" d="M59.083,43.875c0.633,0.451,1.146,1.179,1.488,2.055"></path><path fill="#472b29" d="M60.571,46.181c-0.1,0-0.194-0.061-0.233-0.159c-0.334-0.856-0.818-1.528-1.4-1.942 c-0.112-0.08-0.139-0.236-0.059-0.349c0.081-0.113,0.236-0.138,0.349-0.06c0.662,0.472,1.207,1.222,1.576,2.169 c0.05,0.129-0.014,0.273-0.142,0.324C60.632,46.175,60.602,46.181,60.571,46.181z"></path></g>
+        </svg>Github</a>
+      <a href="https://blog.csdn.net/qq_38587510">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0,0,256,256">
+          <defs><linearGradient x1="6.485" y1="6.483" x2="37.501" y2="37.498" gradientUnits="userSpaceOnUse" id="color-1_GsMdC9NCKCAD_gr1"><stop offset="0" stop-color="#ff5f5f"></stop><stop offset="1" stop-color="#ff3030"></stop></linearGradient></defs><g fill="none" fill-rule="none" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M6,9.446v29.105c0,1.901 1.544,3.445 3.445,3.445h29.111c1.901,0 3.445,-1.544 3.445,-3.445v-29.105c0,-1.901 -1.544,-3.445 -3.445,-3.445h-29.11c-1.902,0 -3.446,1.544 -3.446,3.445z" fill="url(#color-1_GsMdC9NCKCAD_gr1)" fill-rule="nonzero"></path><path d="M13.001,29.999l-0.001,-12c0,-3.312 2.689,-6 6.001,-6h5.999c3.312,0 6.001,2.688 6.001,6l-0.001,3c0,1.104 0.897,2.001 2.001,2.001c1.104,0 2,0.895 2,1.999c0,0.731 0.001,3.789 0.001,5c0,3.312 -2.689,6 -6.001,6h-9.999c-3.312,0 -6.001,-2.688 -6.001,-6zM29.001,27.999c0,-1.103 -0.897,-2 -2,-2h-7c-1.104,0 -2,0.897 -2,2c0,1.104 0.896,2 2,2h7c1.102,0 2,-0.896 2,-2zM27.013,18.999c0,-1.103 -0.897,-2 -2,-2h-5.024c-1.104,0 -2,0.897 -2,2c0,1.104 0.896,2 2,2h5.024c1.102,0 2,-0.896 2,-2z" fill="#ffffff" fill-rule="evenodd"></path></g></g><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g><path d="M49.00667,209.86h2.52c-0.24,2.00667 -0.98,3.55333 -2.22,4.64c-1.24667,1.09333 -2.90333,1.64 -4.97,1.64v0c-2.24,0 -4.03667,-0.80333 -5.39,-2.41c-1.34667,-1.60667 -2.02,-3.75667 -2.02,-6.45v0v-1.82c0,-1.76 0.31333,-3.31 0.94,-4.65c0.63333,-1.33333 1.52667,-2.36 2.68,-3.08c1.15333,-0.71333 2.49,-1.07 4.01,-1.07v0c2.01333,0 3.62667,0.56 4.84,1.68c1.22,1.12667 1.93,2.68333 2.13,4.67v0h-2.52c-0.21333,-1.50667 -0.68333,-2.6 -1.41,-3.28c-0.72667,-0.67333 -1.74,-1.01 -3.04,-1.01v0c-1.6,0 -2.85333,0.59 -3.76,1.77c-0.90667,1.18 -1.36,2.86 -1.36,5.04v0v1.83c0,2.06 0.43,3.69667 1.29,4.91c0.86,1.21333 2.06333,1.82 3.61,1.82v0c1.38667,0 2.45,-0.31333 3.19,-0.94c0.74667,-0.63333 1.24,-1.73 1.48,-3.29zM60.51667,207.43v0c-2.14,-0.62 -3.7,-1.38 -4.68,-2.28c-0.97333,-0.89333 -1.46,-2 -1.46,-3.32v0c0,-1.49333 0.59667,-2.73 1.79,-3.71c1.19333,-0.97333 2.74333,-1.46 4.65,-1.46v0c1.30667,0 2.47,0.25 3.49,0.75c1.02,0.50667 1.81,1.20333 2.37,2.09c0.56,0.88 0.84,1.84667 0.84,2.9v0h-2.52c0,-1.14667 -0.36333,-2.04667 -1.09,-2.7c-0.73333,-0.65333 -1.76333,-0.98 -3.09,-0.98v0c-1.23333,0 -2.19333,0.27 -2.88,0.81c-0.69333,0.54 -1.04,1.29333 -1.04,2.26v0c0,0.77333 0.33,1.42667 0.99,1.96c0.65333,0.53333 1.76667,1.02 3.34,1.46c1.58,0.44667 2.81333,0.93667 3.7,1.47c0.89333,0.53333 1.55333,1.15667 1.98,1.87c0.42667,0.70667 0.64,1.54333 0.64,2.51v0c0,1.53333 -0.59667,2.76333 -1.79,3.69c-1.2,0.92667 -2.80333,1.39 -4.81,1.39v0c-1.3,0 -2.51333,-0.25 -3.64,-0.75c-1.13333,-0.5 -2.00333,-1.18333 -2.61,-2.05c-0.61333,-0.86667 -0.92,-1.85333 -0.92,-2.96v0h2.51c0,1.14667 0.42333,2.05333 1.27,2.72c0.84667,0.66 1.97667,0.99 3.39,0.99v0c1.32,0 2.33333,-0.26667 3.04,-0.8c0.7,-0.54 1.05,-1.27333 1.05,-2.2c0,-0.93333 -0.32667,-1.65333 -0.98,-2.16c-0.64667,-0.50667 -1.82667,-1.00667 -3.54,-1.5zM75.99667,215.88h-5.24v-18.96h5.35c1.64667,0 3.10333,0.36333 4.37,1.09c1.27333,0.73333 2.25333,1.77 2.94,3.11c0.69333,1.34667 1.04333,2.89333 1.05,4.64v0v1.21c0,1.78667 -0.34667,3.35333 -1.04,4.7c-0.68667,1.34667 -1.67,2.38 -2.95,3.1c-1.28,0.72 -2.77333,1.09 -4.48,1.11zM76.16667,198.98h-2.91v14.85h2.63c1.92667,0 3.42667,-0.59667 4.5,-1.79c1.06667,-1.2 1.6,-2.90667 1.6,-5.12v0v-1.11c0,-2.15333 -0.50333,-3.82667 -1.51,-5.02c-1.01333,-1.19333 -2.45,-1.79667 -4.31,-1.81zM102.80667,196.92v18.96h-2.51l-9.54,-14.61v14.61h-2.52v-18.96h2.52l9.57,14.67v-14.67z"></path></g></g>
+        </svg>CSDN</a>
+    </h2> 
 
   </div>
+
   <div id="navigation">
     <a class="nav_item" href="./index.html">
       <i class="icon icon-home icon-white"></i> &nbsp; About
     </a>
-    <a class="nav_item" href="./projects.html#projects">
-      <i class="icon icon-th-large icon-white"></i> &nbsp; Projects
-    </a>
-    <a class="nav_item" href="./projects.html#publications">
+    <a class="nav_item" href="./index.html#publications">
       <i class="icon icon-file icon-white"></i> &nbsp; Publications
     </a>
-    <a class="nav_item" href="./teaching.html#teaching">
-      <i class="icon icon-user icon-white"></i> &nbsp; Teaching / Talks
+    <a class="nav_item" href="./project.html#projects">
+      <i class="icon icon-th-large icon-white"></i> &nbsp; Projects
+    </a>
+    <a class="nav_item" href="./index.html#experiences">
+      <i class="icon icon-user icon-white"></i> &nbsp; Experiences
     </a>
     <a class="nav_item" href="./index.html#awards">
       <i class="icon icon-bookmark icon-white"></i> &nbsp; Honors / Awards
     </a>
-    <a class="nav_item" href="./index.html#media">
+
+    <!-- <a class="nav_item" href="./teaching.html#teaching">
+      <i class="icon icon-user icon-white"></i> &nbsp; Teaching / Talks
+    </a> -->
+    <!-- <a class="nav_item" href="./index.html#media">
       <i class="icon icon-volume-up icon-white"></i> &nbsp; Selected Media
-    </a>
-    <a class="nav_item" href="./awesome.html">
+    </a> -->
+    <!-- <a class="nav_item" href="./awesome.html">
       <i class="icon icon-list icon-white"></i> &nbsp; Awesome Lists
-    </a>
-    <a class="nav_item" href="./letter.html">
+    </a> -->
+    <!-- <a class="nav_item" href="./letter.html">
       <i class="icon icon-pencil icon-white"></i> &nbsp; Letter
-    </a>
+    </a> -->
 
   </div>
 </div>
+
+
+
+
+
 
 <div id="main">
   <div class="title">
     <a class="title_link" id="bio" href="#bio">Bio</a>
     <!--<img src="https://visitor-badge.glitch.me/badge?page_id=JunweiLiang.JunweiLiang&right_color=green" alt=""/>-->
-    <img src="https://vbr.wocr.tk/badge?page_id=JunweiLiang.JunweiLiang&right_color=green" alt=""/>
-
-    <img id="logo" src="resources/hkustgz-logo.jpg"></img>
+    <!-- <img src="https://vbr.wocr.tk/badge?page_id=JunweiLiang.JunweiLiang&right_color=green" alt=""/> -->
   </div>
   <div class="content">
-    I am an Assistant Professor in the <a href="https://facultyprofiles.hkust-gz.edu.cn/thrust-faculties?code=10011A10000000000H28">AI thrust</a> at <a href="https://www.hkust-gz.edu.cn/">The Hong Kong University of Science and Technology (Guangzhou campus)</a>.
-    I lead the <a href="https://precognition.team/">Precognition Lab</a>.
-    I am also an Affiliate Assistant Professor at <a href="https://cse.hkust.edu.hk/admin/people/faculty/?c=affiliate_gz">HKUST computer science & engineering department</a>.
+    <!-- I am a Ph.D. Student in the <a href="http://www.aiar.xjtu.edu.cn/">Institute of Artificial Intelligence and Robotics (IAIR)</a> at <a href="https://www.xjtu.edu.cn/">Xi'an Jiaotong University</a>, supervised by <a href="https://gr.xjtu.edu.cn/web/pingwei">Ping Wei</a>. I received my M.S. degree from <a href="https://www.hust.edu.cn/">Huazhong University of Science and Technology</a>. -->
+  
+    <!-- <div class="linebreak"></div> -->
 
-    <div class="linebreak"></div>
+    <div class="text-block">
+      <p>
+        I am a Ph.D. Student in the <a href="http://www.aiar.xjtu.edu.cn/">Institute of Artificial Intelligence and Robotics (IAIR)</a> at <a href="https://www.xjtu.edu.cn/">Xi'an Jiaotong University</a>, supervised by <a href="https://gr.xjtu.edu.cn/web/pingwei">Prof. Ping Wei</a>. I received my M.S. degree from <a href="https://www.hust.edu.cn/">Huazhong University of Science and Technology</a>.
+      </p>
+      <div class="linebreak"></div>
+      <p>
+        I focus on <b>multimodal learning</b> and <b>video understanding</b>, which utilizes various modalities (<i>e.g., image, audio, text, etc</i>) to understand <b>long-term untrimmed</b> videos, supporting <b>downstream tasks</b> like video moment retrieval, highlight detection, robot perception, etc.
+        I aim to develop multimodal learning from the perspective of <b>human brain intelligence/cognitive science</b>, with the goal of emulating the brain's cognitive reasoning process. Since the human brain is the most marvelous organ in the universe.
+        Currently, I am investigating the <b>zero-shot potential</b> of <b>multimodal large language models(MLLMs)</b>.
+        <b>I aspire to develop AI technologies that genuinely benefit society.</b>
+        <!-- I am exploring models that <b>unify generation and perception</b>. I am also investigating the <b>zero-shot potential</b> of <b>multimodal large language models(MLLMs)</b>.
+        <b>I aspire to develop AI technologies that genuinely benefit society.</b> -->
+      </p>
+      <div class="linebreak"></div>
+      <p>
+        My research interests include: (1) <b>Multimodal Learning</b> (2) <b>Video Understanding</b> (3) <b>Multimodal Large Language Models</b> (4) <b>Robot</b> (5) <b>Deep Reinforcement Learning</b>
+      </p>
+    </div>
+  </div>
 
-    Prior to joining HKUST-GZ, I was a senior researcher at Tencent Youtu Lab working with <a href="https://scholar.google.com/citations?user=Ljk2BvIAAAAJ&hl=en">Chunhua Shen</a>. I completed my Ph.D. in 2021 from Carnegie Mellon University, advised by <a href="https://scholar.google.com/citations?user=Py54GcEAAAAJ&hl=en">Alexander Hauptmann</a>.
-    My Ph.D. and research work were mostly funded by <a href="https://www.iarpa.gov/research-programs/diva">IARPA</a>, <a href="https://www.nist.gov/ctl/pscr/real-time-video-analytics-situation-awareness">NIST</a> and <a href="https://nsf.gov/awardsearch/showAward?AWD_ID=1650994&HistoricalAwards=false">NSF</a> grants.
-    I was a research intern at Google AI multiple times and collaborated with <a href="https://scholar.google.com/citations?user=jIKjjSYAAAAJ&hl=en">Lu Jiang</a>, <a href="https://scholar.google.com/citations?user=S-hBSfIAAAAJ&hl=en">Liangliang Cao</a>, <a href="https://scholar.google.com/citations?user=feX1fWAAAAAJ">Jia Li</a> and <a href="https://scholar.google.com/citations?user=MxxZkEcAAAAJ&hl=en">Kevin Murphy</a>.
-    I obtained my undergraduate degree from <a href="https://www.ruc.edu.cn/en">RUC</a>, advised by <a href="https://scholar.google.com/citations?user=8UkYbCMAAAAJ&hl=zh-CN">Qin Jin</a>.
 
-    <div class="linebreak"></div>
+  <div class="title">
+    <a class="title_link" id="publications" href="#publications">Publications</a>
+  </div>
 
-    <!--
-    <span style="color: red">I have multiple <strike>fully-funded Ph.D.</strike> and <strike>research assistant/intern positions available.</strike> (Our lab currently has around 10 people, and I want to ensure that everyone is producing meaningful research before I consider expanding the team.) </span> Please checkout potential <a href="./projects.html">projects</a> and <a href="./letter.html">this letter</a> if you are interested in joining our lab. 招生文: [<a href="https://zhuanlan.zhihu.com/p/562523740">知乎</a>] [<a href="https://www.xiaohongshu.com/discovery/item/6323ed9e00000000110142ad">小红书</a>]
-    -->
-     <strike><span style="color: red">I am looking for one PhD. student to work on Embodied AI. Send me an email if you are interested and have two or more first-authored published papers at top conferences. </span></strike>
-     My lab is at capacity now. I will look for PhD. students from MPhils of the university.
-     Please checkout our <a href="https://precognition.team">lab resources</a> and <a href="./letter.html">this letter</a>. 招生文: [<a href="https://zhuanlan.zhihu.com/p/562523740">知乎</a>] [<a href="https://www.xiaohongshu.com/discovery/item/6323ed9e00000000110142ad">小红书</a>]
+  <div class="content publications">
+    <ol>
+      <p style="font-size: 13px;">
+        Accepted/Preprint/In Submission/Patents <br>
+        For more research, please visit the <a href="https://scholar.google.com/citations?user=fONA0roAAAAJ&hl=zh-CN">Google Scholar</a>.
+      </p>
+      <!-- For more research, please visit the <a href="https://scholar.google.com/citations?user=fONA0roAAAAJ&hl=zh-CN">Google Scholar</a>. -->
+      
+      <div class="year">
+        <span>2024</span>
+      </div>
+      <div class="linebreak"></div>
+      <!-- TaskWeave-CVPR2024 -->
+      <li>
+        <div class="imgblock"><img src="camera_ready/cvpr2024_taskweave.gif"></img></div>
+        <span class="title" id="cvpr2024_taskweave" href="#cvpr2024_taskweave">Task-Driven Exploration: Decoupling and Inter-Task Feedback for Joint Moment Retrieval and Highlight Detection
+        </span>
+        <div class="info text-success italic"><span style="font-weight:bold">Jin Yang</span>, Ping Wei, Huan Li, Ziyang Ren</div>
+        <div class="info"><span class="label label-info">CVPR 2024</span></div>
+        <div class="stuff">
+          <a class="" href="https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Task-Driven_Exploration_Decoupling_and_Inter-Task_Feedback_for_Joint_Moment_Retrieval_CVPR_2024_paper.pdf" target="_blank">Paper/</a>
+          <a class="" href="https://scholar.googleusercontent.com/scholar.bib?q=info:qXMtBN-M7s0J:scholar.google.com/&output=citation&scisdr=ClESQuHWEPLz9Cfnm0M:AFWwaeYAAAAAZpPhg0OYCWvkRyYZ502bUCU-WuQ&scisig=AFWwaeYAAAAAZpPhg0gKOWacjfJqUQIzEuoL8qI&scisf=4&ct=citation&cd=-1&hl=zh-CN" target="_blank">BibTex/</a>
+          <a class="" href="https://github.com/EdenGabriel/TaskWeave" target="_blank">Code/</a>
+          <a class="" href="./project.html#webui-mrhd" target="_blank">Related Project</a>
+        </div>
+        <div style="clear:both"></div>
+      </li>
 
-    <div class="linebreak"></div>
+      <!-- TFFormer TCSVT2024-->
+      <li>
+        <!-- <div class="imgblock" style="height:200px"><img src="camera_ready/transgmc_tmm23.gif"></img></div> -->
+        <div class="imgblock"><img src="camera_ready/tcsvt2024_tfformer.png"></img></div>
+        <span class="title">Cross Time-Frequency Transformer for Temporal Action Localization
+        </span>
+        <div class="info text-success italic"><span style="font-weight:bold">Jin Yang</span>, Ping Wei, Nanning Zheng</div>
+        <div class="info"><span class="label label-info">IEEE Transactions on Circuits and Systems for Video Technology (TCSVT 2024)</span></div>
+        <div class="stuff">
+          <a class="" href="https://ieeexplore.ieee.org/document/10290953" target="_blank">Paper/</a>
+          <a class="" href="camera_ready/tcsvt2024_tfformer.bib" target="_blank">BibTex/</a>
+          <a class="" href="https://www.youtube.com/watch?v=XN7pfajhlxc" target="_blank">Demo Video/</a>
+          <a class="" href="https://github.com/EdenGabriel/TFFormer" target="_blank">Code</a>
+        </div>
+        <div style="clear:both"></div>
+      </li>
 
-    For fellow assistant professors and Ph.D. students, I have gathered some <span style="font-weight: bold">awesome lists</span> of resources that may be useful for your success. See <a href="./awesome.html">here</a> and feel free to contribute on Github. [<a href="https://wx.zsxq.com/mweb/views/topicdetail/topicdetail.html?topic_id=411558545282218&group_id=142181451122&inviter_id=582155511885254">被CVer盗了hhh</a>]
+      <!-- In submission TPAMI 2024 -->
+      <li>
+        <div class="imgblock"><img src="camera_ready/submisson_tpami24.gif"></img></div>
+        <div class="info"><span class="text-error" style="font-weight: bold; font-style: italic;"><b>In Submission</b></span></div>
+        <span class="title" id="submisson_tpami24" href="#submisson_tpami24">Perceptual Consistency-Driven Abstraction via Minimax Optimization for Joint Moment Retrieval and Highlight Detection
+        </span>
+        <div class="info text-success italic"><span style="font-weight:bold">Jin Yang</span>, Ping Wei, Huan Li, Nanning Zheng</div>
+        <div class="info"><span class="label label-info">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI 2024)</span></div>
+        <div class="stuff">
+          <!-- <a class="" href="https://ieeexplore.ieee.org/document/10290953" target="_blank">Paper/</a> -->
+          <!-- <a class="" href="camera_ready/tcsvt2024_tfformer.bib" target="_blank">BibTex/</a> -->
+          <!-- <a class="" href="https://www.youtube.com/watch?v=XN7pfajhlxc" target="_blank">Demo Video/</a> -->
+          <!-- <a class="" href="https://github.com/EdenGabriel/TFFormer" target="_blank">Code</a> -->
+          <a class="" href="./project.html#webui-mrhd" target="_blank">Related Project</a>
+        </div>
+        <div style="clear:both"></div>
+      </li>
 
-    <div class="linebreak"></div>
+      <!-- In submission TIP 2024 -->
+      <li>
+        <div class="imgblock"><img src="camera_ready/submisson_tip24.gif"></img></div>
+        <div class="info"><span class="text-error" style="font-weight: bold; font-style: italic;"><b>In Submission</b></span></div>
+        <span class="title" id="submisson_tip24" href="#submisson_tip24">Learning Unified Patterns of Multimodalties for Joint Moment Retrieval and Highlight Detection
+        </span>
+        <div class="info text-success italic"><span style="font-weight:bold">Jin Yang</span>, Ping Wei</div>
+        <div class="info"><span class="label label-info">IEEE Transactions on Image Processing (TIP 2024)</span></div>
+        <div class="stuff">
+          <!-- <a class="" href="https://ieeexplore.ieee.org/document/10290953" target="_blank">Paper/</a> -->
+          <!-- <a class="" href="camera_ready/tcsvt2024_tfformer.bib" target="_blank">BibTex/</a> -->
+          <!-- <a class="" href="https://www.youtube.com/watch?v=XN7pfajhlxc" target="_blank">Demo Video/</a> -->
+          <!-- <a class="" href="https://github.com/EdenGabriel/TFFormer" target="_blank">Code</a> -->
+          <a class="" href="./project.html#webui-mrhd" target="_blank">Related Project</a>
+        </div>
+        <div style="clear:both"></div>
+      </li>
 
-    If you want to meet, check out <a href="https://calendar.google.com/calendar/embed?src=junweiliang1114%40gmail.com&ctz=Asia%2FShanghai" target="_blank">my public calendar</a> first and propose a meeting via email.
+      <!-- In submission huanli-TPAMI 2024 -->
+      <li>
+        <div class="imgblock"><img src="camera_ready/huanli_tpami2024.gif"></img></div>
+        <div class="info"><span class="text-error" style="font-weight: bold; font-style: italic;"><b>In Submission</b></span></div>
+        <span class="title">Asymmetric Apparent-aware Relation Consistency Learning for Video Relation Grounding
+        </span>
+        <div class="info text-success italic">Huan Li, Ping Wei, <span style="font-weight:bold">Jin Yang</span>, Nanning Zheng</div>
+        <div class="info"><span class="label label-info">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI 2024)</span></div>
+        <!-- <div class="stuff"> -->
+          <!-- <a class="" href="https://ieeexplore.ieee.org/document/10290953" target="_blank">Paper/</a> -->
+          <!-- <a class="" href="camera_ready/tcsvt2024_tfformer.bib" target="_blank">BibTex/</a> -->
+          <!-- <a class="" href="https://www.youtube.com/watch?v=XN7pfajhlxc" target="_blank">Demo Video/</a> -->
+          <!-- <a class="" href="https://github.com/EdenGabriel/TFFormer" target="_blank">Code</a> -->
+        <!-- </div> -->
+        <div style="clear:both"></div>
+      </li>
 
+      <!-- In submission ren-BMVC 2024 -->
+      <li>
+        <div class="imgblock"><img src="camera_ready/ren_bmvc2024.PNG"></img></div>
+        <div class="info"><span class="text-error" style="font-weight: bold; font-style: italic;"><b>In Submission</b></span></div>
+        <span class="title">Learning Scene-Goal-Aware Motion Representation for Trajectory Prediction
+        </span>
+        <div class="info text-success italic">Ziyang Ren, Ping Wei, Haowen Tang, Huan Li, <span style="font-weight:bold">Jin Yang</span></div>
+        <div class="info"><span class="label label-info">BMVC 2024</span></div>
+        <!-- <div class="stuff"> -->
+          <!-- <a class="" href="https://ieeexplore.ieee.org/document/10290953" target="_blank">Paper/</a> -->
+          <!-- <a class="" href="camera_ready/tcsvt2024_tfformer.bib" target="_blank">BibTex/</a> -->
+          <!-- <a class="" href="https://www.youtube.com/watch?v=XN7pfajhlxc" target="_blank">Demo Video/</a> -->
+          <!-- <a class="" href="https://github.com/EdenGabriel/TFFormer" target="_blank">Code</a> -->
+        <!-- </div> -->
+        <div style="clear:both"></div>
+      </li>
+
+      <div class="year">
+        <span>2023</span>
+      </div>
+      <div class="linebreak"></div>
+      <!-- TransGMC TMM2023 -->
+      <li>
+        <div class="imgblock"><img src="camera_ready/tmm23_transgmc.gif"></img></div>
+        <span class="title">Gated Multi-Scale Transformer for Temporal Action Localization
+        </span>
+        <div class="info text-success italic"><span style="font-weight:bold">Jin Yang</span>, Ping Wei, Ziyang Ren, Nanning Zheng</div>
+        <div class="info"><span class="label label-info">IEEE Transactions on Multimedia (TMM 2023)</span></div>
+        <div class="stuff">
+          <a class="" href="https://ieeexplore.ieee.org/abstract/document/10336518" target="_blank">Paper/</a>
+          <a class="" href="camera_ready/tmm23_transgmc.bib" target="_blank">BibTex/</a>
+          <a class="" href="https://www.youtube.com/watch?v=rZAn0A5jLb8" target="_blank">Demo Video/</a>
+          <a class="" href="https://github.com/EdenGabriel/TransGMC" target="_blank">Code</a>
+        </div>
+        <div style="clear:both"></div>
+      </li>
+
+      <div class="year">
+        <span>2022</span>
+      </div>
+      <div class="linebreak"></div>
+      <!-- TSMC2022 -->
+      <li>
+        <div class="imgblock"><img src="camera_ready/SAC-evaluation.gif"></img></div>
+        <span class="title" id="tsmc2022" href="#tsmc2022">Deep reinforcement learning with a stage incentive mechanism of dense reward for robotic trajectory planning
+        </span>
+        <!-- <div class="info text-muted italic">Gang Peng, <span style="font-weight:bold">Jin Yang<sup>*</sup></span>, Xinde Li, Mohammad Omar Khyam ( <sup>*</sup> student first author)</div>
+         -->
+         <div class="info text-success italic">Gang Peng, <span style="font-weight:bold">Jin Yang<sup>*</sup></span>, Xinde Li, Mohammad Omar Khyam ( <sup>*</sup> student first author)</div>
+        <div class="info"><span class="label label-info">IEEE Transactions on Systems, Man, and Cybernetics: Systems (TSMC 2022)</span></div>
+        <div class="stuff">
+          <a class="" href="https://ieeexplore.ieee.org/abstract/document/10004017" target="_blank">Paper/</a>
+          <a class="" href="https://scholar.googleusercontent.com/scholar.bib?q=info:PGn5_5FngQkJ:scholar.google.com/&output=citation&scisdr=ClESQuHWEPLz9CfyR2s:AFWwaeYAAAAAZpP0X2tF4XXw2LHAttg95EykYFU&scisig=AFWwaeYAAAAAZpP0X0gIDJQhgRLmi81MDNnWBOs&scisf=4&ct=citation&cd=-1&hl=zh-CN" target="_blank">BibTex/</a>
+          <a class="" href="./project.html#drl" target="_blank">Related Project</a>
+        </div>
+        <div style="clear:both"></div>
+      </li>
+
+      <div class="year">
+        <span>2021</span>
+      </div>
+      <div class="linebreak"></div>
+      <!-- ICCAR2021 -->
+      <li>
+        <div class="imgblock"><img src="camera_ready/ICCAR2021.png" style="transform: scale(0.95);"></img></div>
+        <span class="title" id="iccar2021" href="#iccar2021">DDPG with meta-learning-based experience replay separation for robot trajectory planning
+        </span>
+        <div class="info text-success italic"><span style="font-weight:bold">Jin Yang</span>, Gang Peng</div>
+        <div class="info"><span class="label label-info">ICCAR 2021</span></div>
+        <div class="info"><span class="text-error">Oral presentation</span></div>
+        <div class="stuff">
+          <a class="" href="https://ieeexplore.ieee.org/abstract/document/9463493" target="_blank">Paper/</a>
+          <a class="" href="https://scholar.googleusercontent.com/scholar.bib?q=info:RBmtz3m3i6AJ:scholar.google.com/&output=citation&scisdr=ClESQuHWEPLz9Cf3fhY:AFWwaeYAAAAAZpPxZhadsiathU0TRYs1ev-vKCw&scisig=AFWwaeYAAAAAZpPxZmzYJK0jvv1I6xiEhYJGJtM&scisf=4&ct=citation&cd=-1&hl=zh-CN" target="_blank">BibTex/</a>
+          <a class="" href="./project.html#drl" target="_blank">Related Project</a>
+        </div>
+        <div style="clear:both"></div>
+      </li>
+
+
+      <!-- reference list term -->
+      <!-- <li>
+        <div class="imgblock"><img src="camera_ready/msnet.jpg"></img></div>
+        <span class="title">MSNet: A Multilevel Instance Segmentation Network for Natural Disaster Damage Assessment in Aerial Videos
+        </span>
+        <div class="info text-success italic">Xiaoyu Zhu, <span style="font-weight:bold">Junwei Liang</span>, Alexander Hauptmann</div>
+        <div class="info"><span class="label label-info">WACV 2021</span> &nbsp;
+          <iframe src="https://ghbtns.com/github-btn.html?user=zgzxy001&repo=MSNET&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+        </div>
+        <div class="info"><span class="text-error">Reported by CMU news </span></div>
+        <div class="stuff">
+          <a class="" href="http://openaccess.thecvf.com/content/WACV2021/papers/Zhu_MSNet_A_Multilevel_Instance_Segmentation_Network_for_Natural_Disaster_Damage_WACV_2021_paper.pdf" target="_blank">[Paper]</a>
+          <a class="" href="https://www.cmu.edu/news/stories/archives/2020/august/drones-hurricane-damage.html" target="_blank">[CMU News]</a>
+          <a class="" href="https://github.com/zgzxy001/MSNET" target="_blank">[Project Page/Code/Model]</a>
+        </div>
+        <div style="clear:both"></div>
+      </li> -->
+      <!-- <li>
+        <div class="imgblock"  style="height:170px;" ><img src="camera_ready/mm19.gif"></img></div>
+        <span class="title">Shooter Localization Using Social Media Videos
+        </span>
+        <div class="info text-success italic"><span style="font-weight:bold">Junwei Liang</span>, Jay Aronson, Alexander Hauptmann</div>
+        <div class="info"><span class="label label-info">ACM Multimedia (MM) 2019</span> <span class="text-error"><br/>(Press coverage:
+          <a href="https://pittsburgh.cbslocal.com/2019/11/20/cmu-develops-video-system-locate-mass-shooters/">
+            <img class="press" src="resources/cbs.png"></img>
+          </a>,
+          <a href="https://www.cmu.edu/news/stories/archives/2019/november/system-locates-shooters-using-smartphone-video.html">
+            <img class="press" src="resources/cmu.png"></img>
+          </a>,
+
+          <a href="https://www.wpxi.com/news/top-stories/shooters-can-be-located-with-smartphone-video-using-new-cmu-developed-tool/1010922936">
+            <img class="press" src="resources/wpxi.png"></img>
+          </a>,
+          <a href="https://www.post-gazette.com/business/tech-news/2019/11/20/Carnegie-Mellon-CMU-develops-cellphone-smartphone-video-system-location-shooter-triangulate/stories/201911200101">
+            <img class="press" src="resources/post.png"></img>
+          </a>,
+          <a href="https://www.dailymail.co.uk/sciencetech/article-7707501/Carnegie-Mellon-aims-end-pro-longed-massacres-locates-active-shooters.html">
+            <img class="press" src="resources/dailymail.png"></img>
+          </a>,
+          <a href="https://gizmodo.com/smartphone-videos-can-now-be-analyzed-and-used-to-pinpo-1839979803">
+            <img class="press" src="resources/gizmodo.png"></img>
+          </a>,
+          <a href="https://www.msn.com/en-us/news/us/researchers-at-carnegie-mellon-university-develop-video-system-to-locate-mass-shooters/ar-BBX3wRA">
+            <img class="press" src="resources/msn.png"></img>
+          </a>,
+          <a href="https://www.techspot.com/news/82881-researchers-develop-system-can-pinpoint-shooter-location-using.html">
+            <img class="press" src="resources/techspot.png"></img>
+          </a>,
+          <a href="https://www.sciencedaily.com/releases/2019/11/191120070712.htm">
+            <img class="press" src="resources/science_daily.png"></img>
+          </a>,
+          <a href="https://gcn.com/articles/2019/11/22/smartphone-shooter-location.aspx">
+            <img class="press" src="resources/gcn.png"></img>
+          </a>
+        )</span> </div>
+        <div class="stuff">
+          <a class="" href="https://www.cmu.edu/chrs/publications/pdf/shooter-localization-using-social-media-videos.pdf" target="_blank">[Paper]</a>
+          <a class="" href="camera_ready/mm19.bib" target="_blank">[BibTex]</a>
+          <a class="" href="https://www.youtube.com/watch?v=6q7LqqzrY2I" target="_blank">[Demo Video]</a>
+          <a class="" href="https://vera.cs.cmu.edu" target="_blank">[Project Page]</a>
+        </div>
+        <div style="clear:both"></div>
+      </li> -->
+
+    </ol>
   </div>
 
   <div class="subtitle">
-    <a class="title_link" id="group" href="#group">Precognition Lab</a>
-    (Website: <a href="https://precognition.team">precognition.team</a>)
-    (Publications: <a href="https://precognition.team/index.html#publications">Link</a>)
+    <a class="title_link" id="patent" href="#patent">Patent</a>
   </div>
-
   <div class="content">
-    Our research lab, the Precognition Lab (智能感知与预测实验室), is interested in building human-level <span style="font-weight: bold;">Embodied AI</span> systems that can effectively perceive, reason, and interact with the real-world for the good of humans.
-    Here is an up-to-date <a href="https://precognition.team/projects.html#roadmap">research roadmap</a>.
-    Here are our on-going or finished <a href="./projects.html">research grants</a>.
-
-
-
-    <div class="linebreak"></div>
-
-    Our lab's computing resources include 32 RTX 3090/4090 GPUs and a cluster of 24 A6000 GPUs with a 100TB NAS. See <a href="https://www.linkedin.com/feed/update/urn:li:activity:7099940517966200832/">this post</a>.
-    And we have multiple mobile platforms with robot arms and dex hands:
-
-    <div class="linebreak"></div>
-
-    <!-- <img src="resources/robot1.png" style="height:300px;margin:20px 30px 0 0"></img> -->
-    <img src="resources/teleOp_dog_arm_tennis_stand_oncourt_noppl.gif" style="height:300px;margin:20px 30px 20px 0"></img>
-    <img src="resources/robotdoghand_open_door.gif" style="height:300px;margin:20px 30px 20px 0"></img>
-    <img src="resources/dex_handaliengo_grab_things.gif" style="height:300px;margin:20px 30px 20px 0"></img>
-    <img src="resources/robot3.png" style="height:300px;margin:20px 30px 20px 0"></img>
-
+    <ul>
+      <li>
+        <span class="title"><b>CN Patent</b> 一种基于深度强化学习的机械臂运动规划方法和系统 (CN 114952828)</span>
+        <!-- <div class="info">
+          Worked on all-in-one platform for AI training and model deployment. This integrates data sources, model training, testing, deployment, and integration into a streamlined AI application deployment process. It offers a variety of AI models tailored to address different business needs.
+        </div> -->
+      </li>
+    </ul>
   </div>
 
   <div class="title">
+    <a class="title_link" id="projects" href="#projects">Projects</a>
+  </div>
+
+  <div class="content">
+    <p style="font-size: 13px;">
+      selected projects from 2019 to present
+    </p>
+    <ul>
+      <li>
+        <a class="" href="./project.html#webui-mrhd" target="_blank">面向视频时刻检索与高光检测的WebUI系统</a>
+      </li>
+      <li>
+        <a class="" href="./project.html#drl" target="_blank">基于深度强化学习的机械臂运动规划系统</a>
+      </li>
+      <li>
+        <a class="" href="./project.html#2019contest" target="_blank">双臂协作机器人</a>
+      </li>
+      <li>
+        <a class="" href="./project.html#yoloqt" target="_blank">图像预处理及图像标注辅助系统</a>
+      </li>
+      <li>
+        <a class="" href="./project.html#autopatch" target="_blank">自动化膜片钳及细胞检测仿真系统</a>
+      </li>
+    </ul>
+  </div>
+  <!--  --------------------------------------  -->
+  <!-- <div class="title">
     <a class="title_link" id="news" href="#news">News</a>
   </div>
 
@@ -182,69 +482,6 @@
         [<a href="https://mp.weixin.qq.com/s/qZsHR-3adiDuku6ynwmcFg">联汇科技</a>]
       </li>
       <li>
-        <span class="label label-info">07/2024</span>
-        Two papers accepted at ECCV 2024.
-      </li>
-      <li>
-        <span class="label label-info">05/2024</span>
-        1 paper accepted at <a href="https://teleema.github.io/projects/SADE/sade.html">NAACL 2024</a>.
-        1 paper accepted at ACL 2024. Main conference.
-      </li>
-      <li>
-        <span class="label label-info">04/2024</span>
-        My <a href="http://www.davidqiu.com/">PhD student Dicong Qiu</a> is reported by the university media.
-        [<a href="https://mp.weixin.qq.com/s/pUpWrnDtIm5gK_ZWOWhxHg">HKUST(GZ)</a>]
-        [<a href="https://mp.weixin.qq.com/s/WJxtyM2FRzOABdz_N35a6A">INFO Hub</a>]
-        [<a href="https://mp.weixin.qq.com/s/5smO2jbZV7_OOXIecxWNPw">AI Thrust</a>]
-      </li>
-      <li>
-        <span class="label label-info">02/2024</span>
-        Serve as a panelist at the VALSE Embodied AI webinar.
-        [<a href="https://mp.weixin.qq.com/s/788DpNUbjklH-unhznkewg?poc_token=HJlaAmaj-hqsfo_KezM6IrqyY7MsZZ5wYfVpxEyz">VALSE</a>]
-        [<a href="https://live.bilibili.com/22300737">bilibili</a>]
-      </li>
-      <li>
-        <span class="label label-info">02/2024</span> Co-organizing the <a href="https://sites.google.com/view/ieeecvf-cvpr2024-precognition">The 6th workshop on Precognition: Seeing through the Future</a> @CVPR 2024.
-        [<a href="https://www.linkedin.com/posts/junweiliang_cvpr2024-computervision-visionforecasting-activity-7163724230201733120-ERWa/">Call For Papers</a>] [<a href="https://zhuanlan.zhihu.com/p/682320005">知乎</a>] [<a href="https://www.xiaohongshu.com/explore/65cd76e400000000070055a8">小红书</a>]
-      </li>
-      <li>
-        <span class="label label-info">12/2023</span> Keynote speech at the CEII2023 Workshop
-        [<a href="https://mp.weixin.qq.com/s/FRZ_r2BrvCz2Y7RreJdLgA">Schedule</a>]
-      </li>
-      <li>
-        <span class="label label-info">10/2023</span> Co-organizing the Open-world Visual Perception Workshop (“开放世界下的视觉感知和增强”主题论坛) @PRCV 2023
-        [<a href="https://mp.weixin.qq.com/s/ib9aKBhQhoaAFqZB93F3wQ">Schedule</a>]
-      </li>
-      <li>
-        <span class="label label-info">09/2023</span> Hosting HKUST AI Seminar series. Many thanks to the incoming speakers from around the world!
-        [<a href="https://hkust-seminar.github.io/">Course Website</a>]
-      </li>
-      <li>
-        <span class="label label-info">08/2023</span> HKUST-GZ PhD Summer Camp has started! Welcome!
-        [<a href="https://www.kaggle.com/competitions/hkustgz-ai-summer-camp-junwei-p1">Project 1</a>]
-        [<a href="https://www.kaggle.com/competitions/hkustgz-ai-summer-camp-junwei-p2">Project 2</a>]
-      </li>
-      <li>
-        <span class="label label-info">07/2023</span> Attended a series of talks and events. No more traveling till fall!
-        [<a href="https://www.xiaohongshu.com/explore/64a809f5000000001a011856">WAIC @Shanghai</a>]
-        [<a href="https://www.xiaohongshu.com/explore/6483cb490000000013034466">RUC Seminar @Beijing</a>]
-      </li>
-      <li>
-        <span class="label label-info">06/2023</span> The Precognition Workshop was successfully held at CVPR! Thanks to all the co-organizers and program committee members!
-        [<a href="https://sites.google.com/view/ieeecvf-cvpr2023-precognition">Workshop Site</a>]
-        [<a href="https://www.youtube.com/watch?v=Z3JhfOp0eGM">CVPR Workshop Recording</a>]
-      </li>
-      <li>
-        <span class="label label-info">02/2023</span> One paper accepted by <span style="font-weight:bold">CVPR 2023</span>. Congrats to Xiaoyu!
-      </li>
-      <li>
-        <span class="label label-info">02/2023</span> I'm teaching <a href="https://hkust-aiaa5032.github.io/">AIAA 5032 Foundations of Artificial Intelligence</a> and <a href="https://hkust-aiaa5036.github.io/">AIAA 5036 Autonomous AI</a> this semester at HKUST (Guangzhou).
-      </li>
-      <li>
-        <!--<a href="https://www.linkedin.com/posts/khoa-luu-90900215_cvpr2023-activity-7009293998955655168-M4lu?utm_source=share&utm_medium=member_desktop">Precognition workshop</a>-->
-        <span class="label label-info">01/2023</span> I am co-organizing the <a href="https://sites.google.com/view/ieeecvf-cvpr2023-precognition">The 5th workshop on Precognition: Seeing through the Future</a> @CVPR 2023. [<a href="https://www.linkedin.com/posts/junweiliang_cvpr2023-workshop-computervision-activity-7030466054787121152-NacF?utm_source=share&utm_medium=member_desktop">Call For Papers</a>] [<a href="https://zhuanlan.zhihu.com/p/603134088">知乎</a>]
-      </li>
-      <li>
         <span class="label label-info">10/2022</span> Presented first-ever lecture at HKUST (Guangzhou).
         [<a href="https://www.youtube.com/watch?v=i2M9codDGes">AI Seminar</a>]
       </li>
@@ -253,172 +490,13 @@
         [<a href="https://arxiv.org/abs/2209.12362">Multi-Action</a> (<a href="https://nips.cc/virtual/2022/spotlight/65262" style="color:red">Spotlight paper</a>, 3.7% acceptance rate, 384/10411)]
         [<a href="https://arxiv.org/abs/2209.13307">Video Retrieval</a>]
       </li>
-      <li>
-        <span class="label label-info">10/2022</span> Joined HKUST-GZ as a Tenure-Track Assistant Professor. Started an <a href="https://github.com/JunweiLiang/awesome_lists">awesome list</a> collection for TTAPs and PhD students.
-      </li>
-      <li>
-        <span class="label label-info">09/2022</span> Invited to present at a young researcher forum by <a href="https://scholar.google.com/citations?user=qpBtpGsAAAAJ&hl=en">Prof. Xiaoou Tang</a> and <a href="https://www.shlab.org.cn/">Shanghai AI Lab</a>.
-      </li>
-      <li>
-        <span class="label label-info">06/2022</span> Achieved <span style="font-weight:bold;">second-place</span> out of 150 teams on the <a href="https://arxiv.org/pdf/2204.10380.pdf">public leaderboard</a> of the Naturalist Driver Action Recognition Task - AI City Challenge @ CVPR 2022.
-        [<a href="https://openaccess.thecvf.com/content/CVPR2022W/AICity/papers/Liang_Stargazer_A_Transformer-Based_Driver_Action_Detection_System_for_Intelligent_Transportation_CVPRW_2022_paper.pdf">CVPRW Paper</a>]
-        [<a href="https://www.youtube.com/watch?v=u4CrNKt4P54">Presentation</a>] [<a href="https://github.com/JunweiLiang/aicity_action">Code and Model</a>]
-      </li>
-      <li>
-        <span class="label label-info">10/2021</span> Published a <a href="https://www.techbeat.net/talk-info?id=588">research talk</a> at TechBeat.net on Pedestrian Trajectory Prediction. [<a href="https://www.techbeat.net/talk-info?id=588">将门TechBeat</a>] [<a href="https://www.bilibili.com/video/BV1Y44y1x7nv/">B站</a>]
-      </li>
-      <!--
-      <li>
-        <span class="label label-info">09/2021</span> Joined <span style="font-weight:bold">Tencent Youtu Lab</span> as a researcher.
-      </li>
-      -->
-      <li>
-        <span class="label label-info">08/2021</span> Received Doctoral Consortium Award at ICCV 2021, mentored by <a href="https://people.epfl.ch/alexandre.alahi?lang=en">Prof. Alexandre Alahi</a>.
-      </li>
-      <li>
-        <span class="label label-info">08/2021</span> 1 paper accepted by <span style="font-weight:bold">ICCV 2021</span>.
-      </li>
-      <li>
-        <span class="label label-info">08/2021</span> Our <a href="https://vera.cs.cmu.edu">VERA</a> system helps another major <span style="font-weight:bold">Washington Post</span> news report. [<a href="https://www.washingtonpost.com/world/interactive/2021/myanmar-crackdown-military-coup/">link</a>]
-          <a href="https://www.washingtonpost.com/world/interactive/2021/myanmar-crackdown-military-coup/">
-            <img class="press" src="resources/wapo.png"></img>
-          </a>
-      </li>
-      <li>
-        <span class="label label-info">07/2021</span> Successfully defended my Ph.D. thesis: From Recognition to Prediction: Analysis of Human Action and Trajectory Prediction in Video. [<a href="thesis/">link</a>]
-      </li>
-      <li>
-        <span class="label label-info">04/2021</span> Featured in a <a href="https://www.washingtonpost.com/investigations/interactive/2021/dc-police-records-capitol-riot/">front-page news report</a> (04/15) by Washington Post using crowding counting technologies. [<a href="https://www.youtube.com/watch?v=rsQTY9083r8?t=1086">video</a>] [<a href="https://www.zhihu.com/zvideo/1366151651770834944">知乎</a>]
-        <a href="https://www.washingtonpost.com/investigations/interactive/2021/dc-police-records-capitol-riot/">
-            <img class="press" src="resources/wapo.png"></img>
-        </a>
-      </li>
-      <li>
-        <span class="label label-info">01/2021</span> <span style="font-weight: bold;">Invited presentation</span> at ICPR'20 pattern forecasting workshop. [<a href="https://sites.google.com/di.uniroma1.it/patcast/program?authuser=0">link</a>]
-      </li>
-      <!--<li>
-        [10/2020] Successfully proposed my PhD. thesis.
-      </li>-->
-      <li>
-        <span class="label label-info">09/2020</span> We won the <a href="https://www.nist.gov/ctl/pscr/open-innovation-prize-challenges/past-prize-challenges/2020-automated-stream-analysis">Automated Streams Analysis for Public Safety Challenge</a> with a <a href="https://www.herox.com/ASAPS1/update/3483">$30k prize</a>.
-      </li>
-      <li>
-        <span class="label label-info">08/2020</span> Our <a href="https://arxiv.org/abs/2006.16479">paper</a> has been accepted by WACV 2021 (one strong-accept) and <span style="font-weight:bold">reported by CMU news</span>:
-        <a href="https://www.cmu.edu/news/stories/archives/2020/august/drones-hurricane-damage.html">
-            <img class="press" src="resources/cmu.png"></img>
-        </a>
-      </li>
-      <li>
-        <span class="label label-info">08/2020</span> Analyzed videos for journalist from <span style="font-weight:bold">the Washington Post</span> on a <a href="https://www.washingtonpost.com/sports/2020/08/26/redskins-cheerleaders-video-daniel-snyder-washington/">major news</a>.
-          <a href="https://www.washingtonpost.com/sports/2020/08/26/redskins-cheerleaders-video-daniel-snyder-washington/">
-            <img class="press" src="resources/wapo.png"></img>
-          </a>
-      </li>
-      <li>
-        <span class="label label-info">07/2020</span> Awarded <a href="https://baijiahao.baidu.com/s?id=1671984902144018200&wfr=spider&for=pc"><span style="font-style: italic;">"AI Rising Star"</span></a> at the <a href="https://worldaic.com.cn/portal/en/index.html">World AI Conference</a>.
-      </li>
-      <li>
-        <span class="label label-info">07/2020</span> <a href="https://precognition.team/next/simaug/"><span style="font-style: italic;">SimAug</span></a> paper accepted by <span style="font-weight:bold">ECCV 2020</span>.
-      </li>
-      <li>
-        <span class="label label-info">06/2020</span> <a href="https://precognition.team/next/multiverse/index.html"><span style="font-style: italic;">Multiverse</span></a> (<span style="font-weight:bold">CVPR 2020</span>) code and dataset are released! [<a href="https://medium.com/@junweil/cvpr20-the-garden-of-forking-paths-towards-multi-future-trajectory-prediction-df23221dc9f8">blog</a>] [<a href="https://zhuanlan.zhihu.com/p/148343447">知乎</a>] [<a href="https://github.com/JunweiLiang/Multiverse">code</a>]
-      </li>
-      <!--
-      <li>
-        <span class="label label-info">04/2020</span> A vision-based <a href="https://github.com/JunweiLiang/social-distancing-prediction"><span style="font-style: italic;">Social Distancing Early Forecasting</span></a> system is open-sourced</span>. Project received $6200 <a href="https://edu.google.com/programs/credits/research/">Google Cloud Research Grant</a>.
-      </li>
-      <li>
-        <span class="label label-info">03/2020</span> <span style="font-weight:bold">Guest lecture</span> at CMU 11-775 class for grad students. [<a href="https://youtu.be/nbT7IIU8Sdc">Video</a>]
-      </li>
-      <li>
-        [12/2019] <a href="https://precognition.team/next/multiverse/index.html"><span style="font-style: italic;">Multiverse</span></a> paper is out! Accepted by <span style="font-weight:bold">CVPR 2020</span>.
-      </li>
-      -->
-      <li>
-        <span class="label label-info">12/2019</span> Received <a href="http://scholarship.baidu.com/">Baidu Scholarship</a> (10 recipients globally).
-        Press Coverage:
-          <a href="http://news.ruc.edu.cn/archives/267603">
-            <img class="press" src="resources/ruc.png"></img>
-          </a>,
-          <a href="http://m.china.com.cn/appshare/doc_1_20_1489589.html?from=groupmessage&isappinstalled=0">
-            <img class="press" src="resources/china.png"></img>
-          </a>,
-          <a href="https://baijiahao.baidu.com/s?id=1654884571460145099&wfr=spider&for=pc">
-            <img class="press" src="resources/baidu.png"></img>
-          </a>,
-          <a href="https://www.yanxishe.com/blogDetail/17504">
-            <img class="press" src="resources/yanxishe.png"></img>
-          </a>,
-          <a href="http://app.bjheadline.com/8816/newshow.php?newsid=5514954&src=stream&typeid=20&uid=335186&did=16835adeb9fa457b8ec1f9b570dcc4b1&show=0&fSize=M&ver=2.6.3&ff=fz&mood=wx&from=groupmessage&isappinstalled=0">
-            <img class="press" src="resources/bjheadline.png"></img>
-          </a>
-      </li>
-      <li>
-        <span class="label label-info">09/2019</span> Our <a href="https://vera.cs.cmu.edu/">Shooter Localization System</a> won <span style="font-weight:bold">Best Demo</span> award at <a href="https://cbmi2019.org/">CBMI2019</a>. [<a href="https://vera.cs.cmu.edu/" target="_blank">Project Site</a>]
-        <br/>Press Coverage:
-          <a href="https://www.cmu.edu/news/stories/archives/2019/november/system-locates-shooters-using-smartphone-video.html">
-            <img class="press" src="resources/cmu.png"></img>
-          </a>,
-          <a href="https://pittsburgh.cbslocal.com/2019/11/20/cmu-develops-video-system-locate-mass-shooters/">
-            <img class="press" src="resources/cbs.png"></img>
-          </a>,
-          <a href="https://www.post-gazette.com/business/tech-news/2019/11/20/Carnegie-Mellon-CMU-develops-cellphone-smartphone-video-system-location-shooter-triangulate/stories/201911200101">
-            <img class="press" src="resources/post.png"></img>
-          </a>,
-          <a href="https://gizmodo.com/smartphone-videos-can-now-be-analyzed-and-used-to-pinpo-1839979803">
-            <img class="press" src="resources/gizmodo.png"></img>
-          </a>,
-          <a href="https://www.dailymail.co.uk/sciencetech/article-7707501/Carnegie-Mellon-aims-end-pro-longed-massacres-locates-active-shooters.html">
-            <img class="press" src="resources/dailymail.png"></img>
-          </a>,
-          <a href="https://www.techspot.com/news/82881-researchers-develop-system-can-pinpoint-shooter-location-using.html">
-            <img class="press" src="resources/techspot.png"></img>
-          </a>
-      </li>
-      <li>
-        <span class="label label-info">06/2019</span> Presented Future Prediction paper at <span style="font-weight:bold">CVPR 2019</span>. It was reported by the media and it received <span style="font-weight:bold">30k+ views</span> in a week. <a href="https://precognition.team/next" target="_blank"><i title="Go to project page" class="icon-zoom-in"></i></a> [<a href="https://twitter.com/jcniebles/status/1141366303921303552" target="_blank">Tweets</a>]
-      </li>
-      <li><span class="label label-info">04/2019</span> Our CMU team's (INF & MUDSML) system achieved the <span style="font-weight:bold">best performance</span> on the <a href="https://actev.nist.gov/prizechallenge#tab_leaderboard" target="_blank">activity detection challenge</a> (<a href="resources/actev-prizechallenge-06-2019.png" target="_blank">Cached</a>) in surveillance videos hosted by NIST & IARPA. <!--The competitors include all other DIVA-funded teams from universities and companies as well as other strong participants from all over the world.--> We have released our code and model for Object Detection & Tracking <a href="https://github.com/JunweiLiang/Object_Detection_Tracking">here</a>. </li>
-      <li><span class="label label-info">12/2018</span> <span style="font-weight:bold">MemexQA</span> paper accepted by <span style="font-weight:bold">TPAMI 2019</span>. <a href="https://precognition.team/memexqa" target="_blank"><i title="Go to project page" class="icon-zoom-in"></i></a></li>
-
-      <li><span class="label label-info">06/2018</span> Presented MemexQA paper at <span style="font-weight:bold">CVPR 2018</span>. [<a href="https://youtu.be/TBOnKekODCI?t=1h11m29s" target="_blank">Spotlight Talk</a>]</li>
-      <!--<li>[03/2017] Two papers accepted by ICASSP 2017.</li>
-      <li>[02/2017] Two demo papers accepted by <span style="font-weight:bold">AAAI 2017</span>.</li>-->
-      <li><span class="label label-info">11/2016</span> <span style="font-weight:bold">Best performer</span> in the NIST TRECVID 2016 Ad-hoc Video Search Challenge (no annotation track).</li>
-      <!--<li>[02/2016] One oral paper accepted by <span style="font-weight:bold">IJCAI 2016</span>.</li>-->
     </ul>
-  </div>
-
-  <div class="title">
-    <a class="title_link" id="awards" href="#awards">Awards</a>
-  </div>
+  </div>  -->
+<!--  --------------------------------------  -->
 
 
-  <div class="content">
-    <ul>
-      <li>ICCV Doctoral Consortium Award <div class="float-right">2021</div></li>
-      <li>
-        <a href="https://baijiahao.baidu.com/s?id=1671984902144018200&wfr=spider&for=pc"><span style="font-style: italic;">Rising Star</span></a> (云帆奖-明日之星), World AI Conference <div class="float-right">2020</div>
-      </li>
-      <li>Baidu Scholarship (10 Ph.D. students worldwide) <div class="float-right">2019</div></li>
-      <li>Winner, <a href="https://www.nist.gov/ctl/pscr/open-innovation-prize-challenges/past-prize-challenges/2020-automated-stream-analysis">Automated Streams Analysis for Public Safety Challenge</a> - $30k prize <div class="float-right">2020</div></li>
-      <li>Best Demo Award at CBMI2019 <div class="float-right">2019</div></li>
-      <li>Yahoo! Fellowship <div class="float-right">2016 - 2018</div></li>
-      <li>Winner, TRECVID ActEV Challenge <div class="float-right">2019</div></li>
-      <li>Winner, TRECVID Ad-hoc Video Search Challenge, no annotation track  <div class="float-right">2016</div></li>
-      <li>CMU LTI Student Research Symposium Best Paper Honorable Mentions <div class="float-right">2018</div></li>
-      <li>Google Cloud COVID-19 Research Grant - $6200 <div class="float-right">2020</div></li>
-      <!--
-      <li>CVPR, CES, IJCAI, ICASSP, NIST PSCR, NIST TRECVID student travel grants <div class="float-right">2016-2020</div></li>
-      <li>Best Undergraduate Thesis (Top 5%) <div class="float-right">2015</div></li>
-      <li>Second Prize, the National Undergraduates Computer Design Competition of China <div class="float-right">2014</div></li>
-      <li>National Prize (Top 10%), National Undergraduates Innovation Project <div class="float-right">2013</div></li>
-      -->
-    </ul>
-  </div>
-
-
-  <div class="title">
+<!--  --------------------------------------  -->
+  <!-- <div class="title">
     <a class="title_link" id="media" href="#media">Selected Media</a>
   </div>
 
@@ -430,57 +508,6 @@
         [<a href="https://www.washingtonpost.com/investigations/interactive/2022/shireen-abu-akleh-death/?itid=lk_inline_manual_4/">Link</a>]
       </li>
       <li>
-        <span style="font-weight: bold">Washington Post.</span> <span style="font-style: italic;">Anatomy of a crackdown</span> (provided gunshot and shooter analysis), August 25, 2021.
-        [<a href="https://www.washingtonpost.com/world/interactive/2021/myanmar-crackdown-military-coup//">Link</a>]
-      </li>
-      <li>
-        <span style="font-weight: bold">Washington Post.</span> <span style="font-style: italic;">17 requests for backup in 78 minutes</span> (provided crowd counting analysis), April 15, 2021.
-        [<a href="https://www.washingtonpost.com/investigations/interactive/2021/dc-police-records-capitol-riot/">Link</a>]
-      </li>
-      <li>
-        <span style="font-weight: bold">Carnegie Mellon University News.</span> <span style="font-style: italic;">Amateur Drone Videos Could Aid in Natural Disaster Damage Assessment</span>, August 28, 2020.
-      </li>
-      <li>
-        <span style="font-weight: bold">AZO Robotics.</span> <span style="font-style: italic;">New AI System Helps Detect Damage Caused to Buildings by Hurricanes</span>, August 31, 2020.
-      </li>
-      <li>
-        <span style="font-weight: bold">Washington Post.</span> <span style="font-style: italic;">Lewd cheerleader videos, sexist rules: Ex-employees decry Washington’s NFL team workplace</span> (featured in the video analytics), August 26, 2020.
-        [<a href="https://www.washingtonpost.com/sports/2020/08/26/redskins-cheerleaders-video-daniel-snyder-washington/">Link</a>]
-      </li>
-      <li>
-        <span style="font-weight: bold">CBS.</span> <span style="font-style: italic;">Researchers At Carnegie Mellon University Develop Video System To Locate Mass Shooters Using Smartphones</span>, November 20, 2019.
-      </li>
-      <li>
-        <span style="font-weight: bold">post-gazette.</span> <span style="font-style: italic;">CMU develops video system that can locate mass shooter</span>, November 20, 2019.
-      </li>
-      <li>
-        <span style="font-weight: bold">GIZMODO.</span> <span style="font-style: italic;">Smartphone Videos Can Now Be Analyzed and Used to Pinpoint the Location of a Shooter</span>, November 21, 2019.
-      </li>
-      <li>
-        <span style="font-weight: bold">DailyMail.</span> <span style="font-style: italic;">Active shooters can be located within minutes by new software that analyzes smartphone video from the scene and can even identify the type of gun</span>, November 20, 2019.
-      </li>
-      <li>
-        <span style="font-weight: bold">Techspot.</span> <span style="font-style: italic;">Researchers develop system that can pinpoint a shooter's location using smartphone videos</span>, November 21, 2019.
-      </li>
-      <li>
-        <span style="font-weight: bold">New York Times.</span> <span style="font-style: italic;">Who Killed the Kiev Protesters? A 3-D Model Holds the Clues</span> (featured in the video analytics), May 30, 2018.
-      </li>
-      <li>
-        <span style="font-weight: bold">读芯术.</span> <span style="font-style: italic;">卡内基梅隆大学梁俊卫：视频中行人的多种未来轨迹预测</span>, August, 2020.
-      </li>
-      <li>
-        <span style="font-weight: bold">Baidu.</span> <span style="font-style: italic;">乘风破浪的AI技术青年——首届WAIC云帆奖名单公布</span>, July 11, 2020.
-      </li>
-      <li>
-        <span style="font-weight: bold">China.com.cn.</span> <span style="font-style: italic;">人大高瓴人工智能学院“高屋建瓴-青年说”首期开讲</span>, Jan 6, 2020.
-      </li>
-      <li>
-        <span style="font-weight: bold">Baidu.</span> <span style="font-style: italic;">AI界的中国力量！百度奖学金助力中国AI人才绽放光芒！</span>, Jan 5, 2020.
-      </li>
-      <li>
-        <span style="font-weight: bold">量子位.</span> <span style="font-style: italic;">李飞飞团队造出”窥视未来”新AI:去哪干啥一起猜, 准确率压倒老前辈</span>, received 30k+ views in a week, Feb 13, 2019.
-      </li>
-      <li>
         <span style="font-weight: bold">机器之心.</span> <span style="font-style: italic;">遇见未来！李飞飞等提出端到端系统Next预测未来路径与活动</span>, Feb 14, 2019.
       </li>
       <li>
@@ -490,116 +517,107 @@
       </li>
     </ul>
   </div>
+ -->
+<!--  --------------------------------------  -->
 
-
-<!--
 
   <div class="title">
-    <a class="title_link" id="exp" href="#exp">Research Experience</a>
+    <a class="title_link" id="experiences" href="#experiences">Education/Work Experiences</a>
   </div>
 
+  <div class="subtitle">
+    <a class="title_link" id="research/work" href="#research/work">Research/Work</a>
+  </div>
   <div class="content">
     <ul>
       <li>
-        <span class="title">Researcher at Tencent Youtu Lab</span> <div class="float-right time">2021 - present</div>
+        <span class="title">Research Intern at <b>Alibaba DAMO Group</b></span> <div class="float-right time">2021</div>
         <div class="info">
-          Work on large-scale video and language models and efficient long-term action detection applications.
+          Worked on all-in-one platform for AI training and model deployment. This integrates data sources, model training, testing, deployment, and integration into a streamlined AI application deployment process. It offers a variety of AI models tailored to address different business needs.
         </div>
       </li>
+
       <li>
-        <span class="title">Research Assistant at Carnegie Mellon University</span> <div class="float-right time">2015 - 2021</div>
+        <span class="title">Development Intern at <b>ByteDance Douyin Group</b></span> <div class="float-right time">2021</div>
         <div class="info">
-          Worked on Large-scale Video Analysis and Retrieval. Studied unsupervised learning of video concept detectors from the Internet. Also participated in the development of event reconstruction tool.
-          The project is for Synchronization and localization of noisy user-generated videos to reconstruct the event scene and timeline from unorganized social media videos, affiliates with CMU <a href="http://www.cmu.edu/chrs/" target="_blank">Center for Human Rights Science</a>.
-          I'm also the major contributor to the government-funded projects: <a href="https://www.nist.gov/ctl/pscr/real-time-video-analytics-situation-awareness" target="_blank">PSCR by NIST</a> (2017-2020), <a href="https://www.iarpa.gov/index.php/research-programs/diva" target="_blank">DIVA by IARPA</a> (2017-2021) and <a href="https://www.iarpa.gov/index.php/research-programs/aladdin-video" target="_blank">ALADDIN by IARPA</a> (2017).
-          Advised by <a href="https://scholar.google.com/citations?user=Py54GcEAAAAJ" target="_blank">Prof. Alexander Hauptmann</a>.
-          [<a href="https://www.nist.gov/video/real-time-video-analytics-situation-awareness" target="_blank">PSCR 2018 presentation</a>, <a href="https://www.nist.gov/ctl/pscr/2019-stakeholder-meeting-analytics-sessions" target="_blank">2019</a>]
+          Worked on SPU product management for Douyin Shop using Go, focusing on code refactoring and enhancement.
         </div>
       </li>
+
       <li>
-        <span class="title">Research Intern at Google Cloud AI</span> <div class="float-right time">May 2020 - Aug 2020</div>
+        <span class="title">Research at <b>Institute of Molecular Medicine, Peking University</b></span> <div class="float-right time">Sept. 2018 - May 2019</div>
         <div class="info">
-          Worked on viewpoint equivariant representation learning for activity recognition.
-          Advised by <a href="https://scholar.google.com/citations?user=_lswGcYAAAAJ&hl=en" target="_blank">Dr. Ting Yu</a>, <a href="https://scholar.google.com/citations?user=vM1SktEAAAAJ&hl=en" target="_blank">Dr. Xuehan Xiong</a> and <a href="http://llcao.net/" target="_blank">Prof. Liangliang Cao</a>.
+          Worked on automatic patch clamp technology and cellular image processing. <a href="./project.html#autopatch">Automated Patch Clamp and Cell Detection Simulation System</a>. 
+          Advised by <a href="https://scholar.google.com/citations?user=kMd_EpYAAAAJ&hl=en" target="_blank">Prof. Liangyi Chen</a>
         </div>
       </li>
-      <li>
-        <span class="title">Research Intern at Google AI</span> <div class="float-right time">May 2019 - Aug 2019</div>
-        <div class="info">
-          Worked on future person activity and trajectory prediction in videos. Integrated research models to a Google Cloud product. Used 3D simulator (carla.org) to collect multi-modal future behavioral data.
-          Advised by <a href="http://www.cs.cmu.edu/~lujiang/" target="_blank">Dr. Lu Jiang</a> and <a href="https://www.cs.ubc.ca/~murphyk/" target="_blank">Prof. Kevin Murphy</a>.
-        </div>
-      </li>
-      <li>
-        <span class="title">Student Researcher at Google Cloud AI</span> <div class="float-right time">May 2018 - Dec 2018</div>
-        <div class="info">
-          Worked on activity recognition and prediction in multi-perspective streaming videos. Studied principal computer vision and high-level semantic reasoning models for interperson and person-object interaction to help AI better understand human activities. Advised by <a href="http://www.cs.cmu.edu/~lujiang/" target="_blank">Dr. Lu Jiang</a> and <a href="http://www.niebles.net/" target="_blank">Prof. Juan Carlos Niebles</a>.
-        </div>
-      </li>
-      <li>
-        <span class="title">Research Assistant at Renmin University of China</span> <div class="float-right time">2013 - 2015</div>
-        <div class="info">
-          Studied semantic concept annotation on user-generated videos using audio. Participated HUAWEI semantic concept annotation of UGC videos grand challenge 2014 and ranked 3rd in the evaluation. Also worked on natural language description generation for images and videos with deep models. Ranked 1st in ImageCLEF 2015 “image to sentence” subtask in the evaluation. Advised by <a href="https://scholar.google.com/citations?user=8UkYbCMAAAAJ&hl=zh-CN" target="_blank">Prof. Qin Jin</a>.
-        </div>
-      </li>
+
     </ul>
   </div>
 
-  <div class="title">
+  <div class="subtitle">
     <a class="title_link" id="education" href="#education">Education</a>
   </div>
-
   <div class="content">
     <ul>
       <li>
-        <span class="title">Ph.D. in Artificial Intelligence</span> <div class="float-right time">2017 - 2021</div>
-        <div class="info">School of Computer Science, Carnegie Mellon University</div>
-        <div class="info">Advisor: <a href="https://scholar.google.com/citations?user=Py54GcEAAAAJ&hl=en">Alexander Hauptmann</a></div>
-        <div class="info">Thesis: From Recognition to Prediction: Analysis of Human Action and Trajectory Prediction in Video [<a href="thesis/">Link</a>]</div>
+        <span class="title">Ph.D. in Artificial Intelligence</span> <div class="float-right time">Sept. 2022 - Now</div>
+        <div class="info">School of Artificial Intelligence, Xi'an Jiaotong University</div>
+        <div class="info">Advisor: <a href="https://gr.xjtu.edu.cn/web/pingwei">Prof. Ping Wei</a></div>
+        <!-- <div class="info">Thesis: From Recognition to Prediction: Analysis of Human Action and Trajectory Prediction in Video [<a href="thesis/">Link</a>] </div> -->
       </li>
       <li>
-        <span class="title">M.S. in Artificial Intelligence</span> <div class="float-right time">2015 - 2017</div>
-        <div class="info">School of Computer Science, Carnegie Mellon University</div>
-        <div class="info">Advisor: <a href="https://scholar.google.com/citations?user=Py54GcEAAAAJ&hl=en">Alexander Hauptmann</a></div>
+        <span class="title">M.S. in Artificial Intelligence</span> <div class="float-right time">Sept. 2019 - June 2022</div>
+        <div class="info">School of Artificial Intelligence and Automation, Huazhong University of Science and Technology</div>
+        <div class="info">Advisor: Assoc. Prof. Gang Peng</div>
+        <div class="info">Thesis: Motion Planning of Robotic Manipulator based on Deep Reinforcement Learning</a></div>
       </li>
       <li>
-        <span class="title">B.S. in Computer Science</span> <div class="float-right time">2011 - 2015</div>
-        <div class="info">School of Information, Renmin University of China</div>
-        <div class="info">Advisor: <a href="https://scholar.google.com/citations?user=8UkYbCMAAAAJ&hl=en">Qin Jin</a></div>
+        <span class="title">B.S. in Automation</span> <div class="float-right time">Sept. 2015 - June 2019</div>
+        <div class="info">School of Automation, Tiangong University</div>
+        <div class="info">Advisor: Assoc. Prof. Min Wang</div>
       </li>
     </ul>
   </div>
 
+
+  
   <div class="title">
-    <a class="title_link" id="web" href="#web">Web App Experience</a>
+    <a class="title_link" id="awards" href="#awards">Selected Honors & Awards</a>
   </div>
+
   <div class="content">
     <ul>
+      <div class="content award">
+        <p style="font-size: 13px; font-weight:bold">
+          As of now, accumulated a total of 24 awards and honors across Bachelor, Master, and Doctoral studies.
+        </p>
+      </div>
+      <li>2023 Honor of Excellent Postgraduate at University Level </li>
+      <li>2021 Huawei Scholarship </li>
+      <li>2020 Honor of Merit Postgraduate at University Level </li>
+      <li>2020/2017/2016 First Prize of Scholarship at University Level </li>
+      <li>2020 Shenzhen Stock Exchange Scholarship </li>
       <li>
-        <span class="title"><a href="https://vera.cs.cmu.edu/">Shooter Localization from Social Media Videos</a></span>
-        <div class="info">Widely reported by news media. Presented at CES 2020.</div>
+        <a href="./project.html#2019contest">2019 Second Prize of World Robot Contest (Trico-Robot Challenge) 
+          <span style="color: red; font-size: 16px;">Rank 2</span>
+        </a>
       </li>
-      <li>
-        <span class="title"><a href="https://github.com/JunweiLiang/Lecture_Attendance_Management">Attendance Management System</a></span>
-        <div class="info">
-          Used within <a href="https://www.lti.cs.cmu.edu/">CMU LTI</a> for a course with over a hundred students every semester since 2017.
-        </div>
-      </li>
-      <li>
-        <span class="title">Major CMS websites for organizations</span>
-        <div class="info"><a href="http://www.hillhouseacademy.com/">Hillhouse Academy</a>,  <a href="https://dasai.ruc.edu.cn/index.php/site/designer">Annual Computer Design Competition in China (>2000 users annually)</a> </div>
-      </li>
+      <li>2018 Third Prize of National College Student Robot Contest (Robocon) <span style="color: red; font-size: 16px;">Rank 1, Team Leader</span></li>
+      <li>2018 Second Prize of USA Undergraduate Mathematical Modeling Contest <span style="color: red; font-size: 16px;">Rank 1</span></li>
+      <li>2017 First Prize of National Undergraduate IoT Design Contest <span style="color: red; font-size: 16px;">Rank 1</span></li>
+      <li>2017 First Prize of Tianjin Undergraduate Robot Contest (Robot Creative Design) <span style="color: red; font-size: 16px;">Rank 1</span></li>
+      <li>2017 Tianjin Undergraduate Innovation and Entrepreneurship project <span style="color: red; font-size: 16px;">Host</span></li>
     </ul>
   </div>
--->
+
 
 
 </div>
 
 
 <!--
-	a Junwei Liang's production
-	contact: junweiliang1114@gmail.com
+	forked from Junwei Liang's production
 -->
 </body>
 </html>

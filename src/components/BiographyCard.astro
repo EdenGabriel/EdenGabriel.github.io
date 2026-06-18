@@ -11,8 +11,7 @@ const { biography } = Astro.props;
 
 <section class="bio-card content-card" aria-labelledby="biography-title">
   <div>
-    <p class="section-kicker">Biography</p>
-    <h2 id="biography-title">About Me</h2>
+    <h2 id="biography-title">Biography</h2>
   </div>
   <div class="bio-text">
     {biography.paragraphs.map((paragraph) => <p>{paragraph}</p>)}

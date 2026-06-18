@@ -1,0 +1,34 @@
+---
+interface NavItem {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  profile: {
+    name: string;
+    chineseName: string;
+    title: string;
+  };
+  navigation: NavItem[];
+}
+
+const { profile, navigation } = Astro.props;
+---
+
+<header class="top-nav">
+  <a class="brand" href="#biography" aria-label="Back to Biography">
+    <span class="brand-mark">JY</span>
+    <span>
+      <strong>{profile.name} / {profile.chineseName}</strong>
+      <small>{profile.title} · Robotics · Multimodal Learning</small>
+    </span>
+  </a>
+  <nav aria-label="Primary navigation">
+    {
+      navigation.map((item) => (
+        <a href={item.href}>{item.label}</a>
+      ))
+    }
+  </nav>
+</header>

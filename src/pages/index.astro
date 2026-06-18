@@ -1,0 +1,39 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BiographyCard from "@components/BiographyCard.astro";
+import CompactLists from "@components/CompactLists.astro";
+import NewsPanel from "@components/NewsPanel.astro";
+import ProfileSidebar from "@components/ProfileSidebar.astro";
+import ProjectGrid from "@components/ProjectGrid.astro";
+import PublicationsSection from "@components/PublicationsSection.astro";
+import ResearchSection from "@components/ResearchSection.astro";
+import TopNav from "@components/TopNav.astro";
+import { readData } from "@lib/data";
+
+const site = readData<any>("site");
+const news = readData<any[]>("news");
+const publications = readData<any[]>("publications");
+const projects = readData<any[]>("projects");
+const patents = readData<any[]>("patents");
+const awards = readData<any[]>("awards");
+---
+
+<BaseLayout title={`${site.profile.name} / ${site.profile.chineseName}`}>
+  <TopNav profile={site.profile} navigation={site.navigation} />
+  <main class="site-shell">
+    <ProfileSidebar profile={site.profile} />
+    <div class="main-column">
+      <div class="intro-grid" id="biography">
+        <BiographyCard biography={site.biography} />
+        <NewsPanel news={news} />
+      </div>
+      <ResearchSection research={site.research} />
+      <PublicationsSection groups={publications} />
+      <CompactLists patents={patents} awards={awards} />
+      <ProjectGrid projects={projects} />
+      <footer class="site-footer">
+        <p>Built with Astro. Content lives in YAML files for easier academic updates.</p>
+      </footer>
+    </div>
+  </main>
+</BaseLayout>

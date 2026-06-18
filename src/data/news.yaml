@@ -1,0 +1,55 @@
+- date: "2025-12"
+  type: paper
+  title: One paper accepted by IEEE Transactions on Multimedia.
+  link:
+    label: Video Temporal Grounding
+    url: https://github.com/EdenGabriel/VABooster
+
+- date: "2025-09"
+  type: paper
+  title: One paper accepted by Pattern Recognition.
+  link:
+    label: Video Temporal Grounding
+    url: https://github.com/EdenGabriel/UPM
+
+- date: "2025-06"
+  type: talk
+  title: Invited speaker at ICCIR 2025, delivering an oral presentation on video multimodal learning.
+  link:
+    label: ICCIR 2025
+    url: https://www.ic-cir.org/
+
+- date: "2025-06"
+  type: award
+  title: Winner of the First Prize in the CVPR2025 Robotwin Dual-Arm Collaboration Challenge (Real-World Track).
+  link:
+    label: Robotwin Challenge
+    url: https://robotwin-benchmark.github.io/cvpr-2025-challenge/
+
+- date: "2025-05"
+  type: award
+  title: Winner of the Second Prize in the CVPR2025 Robotwin Dual-Arm Collaboration Challenge (Simulation Round1).
+  link:
+    label: Robotwin Challenge
+    url: https://robotwin-benchmark.github.io/cvpr-2025-challenge/
+
+- date: "2024-02"
+  type: paper
+  title: One paper accepted at CVPR 2024.
+  link:
+    label: Video Temporal Grounding
+    url: https://github.com/EdenGabriel/TaskWeave
+
+- date: "2023-10"
+  type: paper
+  title: One paper accepted by IEEE Transactions on Multimedia.
+  link:
+    label: Video Temporal Action Localization
+    url: https://github.com/EdenGabriel/TransGMC
+
+- date: "2023-10"
+  type: paper
+  title: One paper accepted by IEEE Transactions on Circuits and Systems for Video Technology.
+  link:
+    label: Video Temporal Action Localization
+    url: https://github.com/EdenGabriel/TFFormer

@@ -1,0 +1,40 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+
+interface Direction {
+  title: string;
+  body: string;
+}
+
+interface Props {
+  research: {
+    title: string;
+    lead: string;
+    image: string;
+    imageAlt: string;
+    directions: Direction[];
+  };
+}
+
+const { research } = Astro.props;
+---
+
+<section class="section-block" aria-labelledby="research-heading">
+  <SectionHeading id="researches" title="Researches" subtitle={research.title} />
+  <div class="research-card content-card">
+    <p class="research-lead">{research.lead}</p>
+    <figure class="research-figure">
+      <img src={research.image} alt={research.imageAlt} loading="lazy" />
+    </figure>
+    <div class="research-directions">
+      {
+        research.directions.map((direction) => (
+          <article>
+            <h3>{direction.title}</h3>
+            <p>{direction.body}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

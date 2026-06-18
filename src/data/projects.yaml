@@ -1,0 +1,35 @@
+- title: HyperMVP
+  subtitle: Hyperbolic Multiview Pretraining for Generalizable Robotic Manipulation
+  category: Robotics
+  image: /assets/papers/submission-cvpr2026.png
+  summary: Multiview pretraining for robotic manipulation with geometry-aware representation learning.
+  links:
+    - label: Website
+      url: https://blien2002.github.io/HyperMVP/
+
+- title: RVAF
+  subtitle: Multi-Task Robotic Manipulation
+  category: Robotics
+  image: /assets/papers/submission-icra2026.png
+  summary: Multi-task robotic manipulation system for robust perception and action under embodied settings.
+  links:
+    - label: Website
+      url: https://anonymous.4open.science/w/RVAF-Anonymization
+
+- title: WebUI-MR&HD
+  subtitle: Moment Retrieval and Highlight Detection System
+  category: Video Understanding
+  image: /assets/papers/cvpr2024-taskweave.gif
+  summary: A web interface for video-language temporal grounding, moment retrieval, and highlight detection demos.
+  links:
+    - label: Related Publications
+      url: "#publications"
+
+- title: Deep Reinforcement Learning for Robot Planning
+  subtitle: Dense reward and stage incentive mechanisms
+  category: Planning
+  image: /assets/projects/drl.png
+  summary: Reinforcement learning systems for robotic trajectory planning and intelligent cleaning robot path planning.
+  links:
+    - label: Publications
+      url: "#publications"

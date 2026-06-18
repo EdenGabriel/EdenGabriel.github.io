@@ -1,0 +1,52 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+
+interface Patent {
+  title: string;
+  inventors: string;
+  type: string;
+  application: string;
+  date: string;
+}
+
+interface Award {
+  date: string;
+  title: string;
+  detail: string;
+}
+
+interface Props {
+  patents: Patent[];
+  awards: Award[];
+}
+
+const { patents, awards } = Astro.props;
+---
+
+<section class="section-block compact-section">
+  <div>
+    <SectionHeading id="patents" title="Patents" subtitle="Selected patent applications" />
+    <div class="compact-card content-card">
+      {patents.map((patent) => (
+        <article>
+          <span>{patent.type} · {patent.date}</span>
+          <h3>{patent.title}</h3>
+          <p>{patent.inventors}</p>
+          <small>Application No. {patent.application}</small>
+        </article>
+      ))}
+    </div>
+  </div>
+  <div>
+    <SectionHeading id="awards" title="Awards" subtitle="Selected honors and talks" />
+    <div class="compact-card content-card">
+      {awards.map((award) => (
+        <article>
+          <span>{award.date}</span>
+          <h3>{award.title}</h3>
+          <p>{award.detail}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,65 @@
+profile:
+  name: Jin Yang
+  chineseName: 杨进
+  title: Ph.D. Candidate
+  affiliation: Institute of Artificial Intelligence and Robotics, Xi'an Jiaotong University
+  location: Xi'an, China
+  avatar: /assets/profile/me.jpg
+  email: jin.y.hust@gmail.com
+  lastUpdated: Jun. 18, 2026
+  visitorNote: GitHub Pages visitor map
+  links:
+    - label: Email
+      url: mailto:jin.y.hust@gmail.com
+      icon: Mail
+    - label: Google Scholar
+      url: https://scholar.google.com/citations?user=fONA0roAAAAJ&hl=zh-CN
+      icon: Scholar
+    - label: GitHub
+      url: https://github.com/EdenGabriel
+      icon: GitHub
+    - label: CSDN
+      url: https://blog.csdn.net/qq_38587510
+      icon: CSDN
+
+navigation:
+  - label: Biography
+    href: "#biography"
+  - label: News
+    href: "#news"
+  - label: Researches
+    href: "#researches"
+  - label: Publications
+    href: "#publications"
+  - label: Patents
+    href: "#patents"
+  - label: Awards
+    href: "#awards"
+  - label: Projects
+    href: "#projects"
+
+biography:
+  paragraphs:
+    - I am a Ph.D. student in the Institute of Artificial Intelligence and Robotics (IAIR) at Xi'an Jiaotong University, supervised by Prof. Ping Wei. I received my M.S. degree from Huazhong University of Science and Technology, supervised by Assoc. Prof. Gang Peng.
+    - My research interests focus on robotics, embodied intelligence, multimodal learning, and video understanding. I aspire to develop AI technologies that genuinely benefit society.
+    - Welcome to contact me for any discussion and cooperation.
+  interests:
+    - Robotics
+    - Embodied Intelligence
+    - Multimodal Learning
+    - Video Understanding
+
+research:
+  title: Multimodal Intelligence for Embodied Systems
+  lead: I explore unmanned systems and embodied agents that perceive scenes, understand multimodal signals, and plan reliable actions under challenging real-world conditions.
+  image: /assets/research/project-overview-2023.png
+  imageAlt: Research overview of intelligent perception and prediction
+  directions:
+    - title: Imaging
+      body: Reliable multimodal signal acquisition for RGB, event, depth, LiDAR, and robot state.
+    - title: Perception
+      body: Discriminative representations for temporal grounding, manipulation, and scene understanding.
+    - title: Understanding
+      body: Reasoning with multimodal large models, task-driven feedback, and embodied knowledge.
+    - title: Planning
+      body: Robotic action planning, trajectory optimization, and real-world challenge systems.

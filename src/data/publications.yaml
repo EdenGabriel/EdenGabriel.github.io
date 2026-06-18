@@ -1,0 +1,126 @@
+- year: 2025
+  items:
+    - title: Differential Amplifier-Inspired AmpAttention for Multi-View Robotic Manipulation
+      authors: Jin Yang, Ping Wei, Nanning Zheng
+      status: In Submission
+      venue: ICRA 2026
+      image: /assets/papers/submission-icra2026.png
+      links:
+        - label: Project Website
+          url: https://anonymous.4open.science/w/RVAF-Anonymization
+
+    - title: Hyperbolic Multiview Pretraining for Robotic Manipulation
+      authors: Jin Yang, Ping Wei, Yixin Chen
+      status: In Submission
+      venue: CVPR 2026
+      image: /assets/papers/submission-cvpr2026.png
+      links:
+        - label: Project Website
+          url: https://blien2002.github.io/HyperMVP/
+
+    - title: Learning Unified Patterns of Multimodalities for Joint Moment Retrieval and Highlight Detection
+      authors: Jin Yang, Ping Wei, Nanning Zheng
+      venue: IEEE Transactions on Multimedia
+      venueShort: TMM 2025
+      image: /assets/papers/tmm2025-vabooster.png
+      links:
+        - label: Code
+          url: https://github.com/EdenGabriel/VABooster
+
+    - title: Learning Unified Patterns of Multimodalities for Joint Moment Retrieval and Highlight Detection
+      authors: Jin Yang, Ping Wei
+      venue: Pattern Recognition
+      venueShort: PR 2025
+      image: /assets/papers/submission-pr25.gif
+      links:
+        - label: Code
+          url: https://github.com/EdenGabriel/UPM
+        - label: Related Project
+          url: "#projects"
+
+- year: 2024
+  items:
+    - title: "Task-Driven Exploration: Decoupling and Inter-Task Feedback for Joint Moment Retrieval and Highlight Detection"
+      authors: Jin Yang, Ping Wei, Huan Li, Ziyang Ren
+      venue: CVPR 2024
+      image: /assets/papers/cvpr2024-taskweave.gif
+      links:
+        - label: Paper
+          url: https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_Task-Driven_Exploration_Decoupling_and_Inter-Task_Feedback_for_Joint_Moment_Retrieval_CVPR_2024_paper.pdf
+        - label: BibTeX
+          url: /assets/bib/cvpr24-taskweave.bib
+        - label: Code
+          url: https://github.com/EdenGabriel/TaskWeave
+
+    - title: Learning Scene-Goal-Aware Motion Representation for Trajectory Prediction
+      authors: Ziyang Ren, Ping Wei, Haowen Tang, Huan Li, Jin Yang
+      venue: BMVC 2024
+      image: /assets/papers/ren-bmvc2024.png
+      links: []
+
+    - title: Cross Time-Frequency Transformer for Temporal Action Localization
+      authors: Jin Yang, Ping Wei, Nanning Zheng
+      venue: IEEE Transactions on Circuits and Systems for Video Technology
+      venueShort: TCSVT 2024
+      image: /assets/papers/tcsvt2024-tfformer.png
+      links:
+        - label: Paper
+          url: https://ieeexplore.ieee.org/document/10290953
+        - label: BibTeX
+          url: /assets/bib/tcsvt2024-tfformer.bib
+        - label: Demo Video
+          url: https://www.youtube.com/watch?v=XN7pfajhlxc
+        - label: Code
+          url: https://github.com/EdenGabriel/TFFormer
+
+    - title: Perceptual Consistency-Driven Abstraction via Minimax Optimization for Joint Moment Retrieval and Highlight Detection
+      authors: Jin Yang, Ping Wei, Huan Li, Nanning Zheng
+      status: In Submission
+      venue: TPAMI 2024
+      image: /assets/papers/submission-tpami24.gif
+      links:
+        - label: Related Project
+          url: "#projects"
+
+- year: 2023
+  items:
+    - title: Gated Multi-Scale Transformer for Temporal Action Localization
+      authors: Jin Yang, Ping Wei, Ziyang Ren, Nanning Zheng
+      venue: IEEE Transactions on Multimedia
+      venueShort: TMM 2023
+      image: /assets/papers/tmm23-transgmc.gif
+      links:
+        - label: Paper
+          url: https://ieeexplore.ieee.org/abstract/document/10336518
+        - label: BibTeX
+          url: /assets/bib/tmm23-transgmc.bib
+        - label: Demo Video
+          url: https://www.youtube.com/watch?v=rZAn0A5jLb8
+        - label: Code
+          url: https://github.com/EdenGabriel/TransGMC
+
+- year: 2022
+  items:
+    - title: Deep reinforcement learning with a stage incentive mechanism of dense reward for robotic trajectory planning
+      authors: Gang Peng, Jin Yang, Xinde Li, Mohammad Omar Khyam
+      venue: IEEE Transactions on Systems, Man, and Cybernetics Systems
+      venueShort: TSMC 2022
+      image: /assets/papers/sac-evaluation.gif
+      links:
+        - label: Paper
+          url: https://ieeexplore.ieee.org/abstract/document/10004017
+        - label: Related Project
+          url: "#projects"
+
+- year: 2021
+  items:
+    - title: DDPG with meta-learning-based experience replay separation for robot trajectory planning
+      authors: Jin Yang, Gang Peng
+      venue: ICCAR 2021
+      status: Oral presentation
+      image: /assets/papers/iccar2021.png
+      links:
+        - label: Paper
+          url: https://ieeexplore.ieee.org/abstract/document/9463493
+        - label: Related Project
+          url: "#projects"

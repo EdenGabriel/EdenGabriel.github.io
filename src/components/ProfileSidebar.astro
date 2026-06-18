@@ -1,0 +1,71 @@
+---
+interface LinkItem {
+  label: string;
+  url: string;
+  icon: string;
+}
+
+interface Props {
+  profile: {
+    name: string;
+    chineseName: string;
+    title: string;
+    affiliation: string;
+    location: string;
+    avatar: string;
+    email: string;
+    lastUpdated: string;
+    visitorNote: string;
+    links: LinkItem[];
+  };
+}
+
+const { profile } = Astro.props;
+---
+
+<aside class="profile-panel">
+  <img class="profile-photo" src={profile.avatar} alt={`${profile.name} portrait`} loading="eager" />
+  <div class="profile-copy">
+    <p class="eyebrow">{profile.title}</p>
+    <h1>{profile.name}</h1>
+    <p class="chinese-name">{profile.chineseName}</p>
+    <p class="affiliation">{profile.affiliation}</p>
+    <p class="location">{profile.location}</p>
+  </div>
+
+  <div class="profile-links" aria-label="Academic links">
+    {
+      profile.links.map((link) => (
+        <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined} rel={link.url.startsWith("http") ? "noreferrer" : undefined}>
+          <span>{link.icon}</span>
+          {link.label}
+        </a>
+      ))
+    }
+  </div>
+
+  <div class="visitor-card" aria-label="Visitor map preview">
+    <div class="visitor-map">
+      <span class="continent c1"></span>
+      <span class="continent c2"></span>
+      <span class="continent c3"></span>
+      <span class="continent c4"></span>
+      <span class="pin p1"></span>
+      <span class="pin p2"></span>
+      <span class="pin p3"></span>
+      <span class="pin p4"></span>
+    </div>
+    <p>{profile.visitorNote}</p>
+  </div>
+
+  <dl class="profile-meta">
+    <div>
+      <dt>Email</dt>
+      <dd><a href={`mailto:${profile.email}`}>{profile.email}</a></dd>
+    </div>
+    <div>
+      <dt>Last updated</dt>
+      <dd>{profile.lastUpdated}</dd>
+    </div>
+  </dl>
+</aside>

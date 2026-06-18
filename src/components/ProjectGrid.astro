@@ -1,0 +1,47 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+
+interface LinkItem {
+  label: string;
+  url: string;
+}
+
+interface Project {
+  title: string;
+  subtitle: string;
+  category: string;
+  image: string;
+  summary: string;
+  links: LinkItem[];
+}
+
+interface Props {
+  projects: Project[];
+}
+
+const { projects } = Astro.props;
+---
+
+<section class="section-block" aria-labelledby="projects-heading">
+  <SectionHeading id="projects" title="Projects" subtitle="Selected projects with compact previews" />
+  <div class="project-grid">
+    {
+      projects.map((project) => (
+        <article class="project-card">
+          <img src={project.image} alt={`${project.title} preview`} loading="lazy" />
+          <div>
+            <span>{project.category}</span>
+            <h3>{project.title}</h3>
+            <p class="project-subtitle">{project.subtitle}</p>
+            <p>{project.summary}</p>
+            <div class="project-links">
+              {project.links.map((link) => (
+                <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined} rel={link.url.startsWith("http") ? "noreferrer" : undefined}>{link.label}</a>
+              ))}
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>

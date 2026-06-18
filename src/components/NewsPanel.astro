@@ -1,0 +1,39 @@
+---
+interface NewsItem {
+  date: string;
+  type: "paper" | "award" | "talk";
+  title: string;
+  link?: {
+    label: string;
+    url: string;
+  };
+}
+
+interface Props {
+  news: NewsItem[];
+}
+
+const { news } = Astro.props;
+---
+
+<section class="news-card content-card" id="news" aria-labelledby="news-title">
+  <div class="card-title-row">
+    <div>
+      <p class="section-kicker">News</p>
+      <h2 id="news-title">Latest Updates</h2>
+    </div>
+    <span>Scrollable</span>
+  </div>
+  <div class="news-scroll" tabindex="0">
+    {
+      news.map((item) => (
+        <article class="news-item">
+          <span class={`news-type ${item.type}`}>{item.type}</span>
+          <time>{item.date}</time>
+          <p>{item.title}</p>
+          {item.link && <a href={item.link.url} target="_blank" rel="noreferrer">{item.link.label}</a>}
+        </article>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,66 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+
+interface LinkItem {
+  label: string;
+  url: string;
+}
+
+interface Publication {
+  title: string;
+  authors: string;
+  status?: string;
+  venue: string;
+  venueShort?: string;
+  image: string;
+  links: LinkItem[];
+}
+
+interface PublicationYear {
+  year: number;
+  items: Publication[];
+}
+
+interface Props {
+  groups: PublicationYear[];
+}
+
+const { groups } = Astro.props;
+---
+
+<section class="section-block" aria-labelledby="publications-heading">
+  <SectionHeading id="publications" title="Publications" subtitle="Selected publications grouped by year" />
+  <div class="publication-list content-card">
+    {
+      groups.map((group) => (
+        <section class="publication-year">
+          <div class="year-badge">{group.year}</div>
+          <div class="publication-items">
+            {
+              group.items.map((paper) => (
+                <article class="publication-item">
+                  <a class="publication-thumb" href={paper.links?.[0]?.url || "#"} target={paper.links?.[0]?.url?.startsWith("http") ? "_blank" : undefined} rel={paper.links?.[0]?.url?.startsWith("http") ? "noreferrer" : undefined}>
+                    <img src={paper.image} alt={`${paper.title} thumbnail`} loading="lazy" />
+                  </a>
+                  <div class="publication-body">
+                    <div class="paper-meta-line">
+                      {paper.status && <span class="status-tag">{paper.status}</span>}
+                      <span>{paper.venueShort || paper.venue}</span>
+                    </div>
+                    <h3>{paper.title}</h3>
+                    <p>{paper.authors}</p>
+                    <div class="paper-links">
+                      {paper.links.map((link) => (
+                        <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined} rel={link.url.startsWith("http") ? "noreferrer" : undefined}>{link.label}</a>
+                      ))}
+                    </div>
+                  </div>
+                </article>
+              ))
+            }
+          </div>
+        </section>
+      ))
+    }
+  </div>
+</section>

@@ -16,6 +16,7 @@ const publications = readData<any[]>("publications");
 const projects = readData<any[]>("projects");
 const patents = readData<any[]>("patents");
 const awards = readData<any[]>("awards");
+const scholarLink = site.profile.links.find((link: any) => link.label === "Google Scholar")?.url;
 ---
 
 <BaseLayout title={`${site.profile.name} / ${site.profile.chineseName}`}>
@@ -23,12 +24,12 @@ const awards = readData<any[]>("awards");
   <main class="site-shell">
     <ProfileSidebar profile={site.profile} />
     <div class="main-column">
-      <div class="intro-stack" id="biography">
+      <div class="intro-stack">
         <BiographyCard biography={site.biography} />
         <NewsPanel news={news} />
       </div>
       <ResearchSection research={site.research} />
-      <PublicationsSection groups={publications} />
+      <PublicationsSection groups={publications} scholarUrl={scholarLink} />
       <CompactLists patents={patents} awards={awards} />
       <ProjectGrid projects={projects} />
       <footer class="site-footer">

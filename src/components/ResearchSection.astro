@@ -23,8 +23,8 @@ const { research } = Astro.props;
   <SectionHeading id="researches" title="Researches" subtitle={research.title} />
   <div class="research-card content-card">
     <p class="research-lead">{research.lead}</p>
-    <figure class="research-figure">
-      <img src={research.image} alt={research.imageAlt} loading="lazy" />
+    <figure class="research-figure research-blank-figure" aria-label={research.imageAlt}>
+      <div class="research-placeholder"></div>
     </figure>
     <div class="research-directions">
       {

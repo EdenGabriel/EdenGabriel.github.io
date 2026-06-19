@@ -2,11 +2,14 @@
 import SectionHeading from "./SectionHeading.astro";
 
 interface Patent {
-  title: string;
-  inventors: string;
+  title?: string;
+  title_zh?: string;
+  title_en?: string;
+  inventors: string | string[];
   type: string;
   application: string;
   date: string;
+  language?: "zh" | "en";
 }
 
 interface Award {
@@ -21,24 +24,53 @@ interface Props {
 }
 
 const { patents, awards } = Astro.props;
+
+const escapeHtml = (value: string) =>
+  value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+
+const patentInventors = (inventors: Patent["inventors"]) =>
+  Array.isArray(inventors) ? inventors : inventors.split(",").map((name) => name.trim()).filter(Boolean);
+
+const renderInventorsHtml = (inventors: Patent["inventors"]) =>
+  patentInventors(inventors)
+    .map((inventor) => {
+      const name = escapeHtml(inventor);
+      return inventor === "杨进" || inventor === "Jin Yang" ? `<strong class="author-me">${name}</strong>` : name;
+    })
+    .join(", ");
+
+const patentMainTitle = (patent: Patent) =>
+  patent.language === "en" ? (patent.title_en || patent.title || patent.title_zh) : (patent.title_zh || patent.title || patent.title_en);
+
+const patentSubTitle = (patent: Patent) =>
+  patent.language === "en" ? patent.title_zh : patent.title_en;
 ---
 
-<section class="section-block compact-section">
-  <div>
-    <SectionHeading id="patents" title="Patents" subtitle="Selected patent applications" />
-    <div class="compact-card content-card">
+<div class="compact-stack">
+  <section class="section-block" aria-labelledby="patents-heading">
+    <SectionHeading id="patents" title="Patents" />
+    <div class="patent-list content-card">
       {patents.map((patent) => (
-        <article>
-          <span>{patent.type} · {patent.date}</span>
-          <h3>{patent.title}</h3>
-          <p>{patent.inventors}</p>
-          <small>Application No. {patent.application}</small>
+        <article class="patent-item">
+          <p class="patent-line">
+            <span class="patent-type">{patent.type}</span>
+            <time>{patent.date}.</time>
+            <span class="patent-inventors" set:html={`${renderInventorsHtml(patent.inventors)}.`} />
+            <span class="patent-title">{patentMainTitle(patent)}.</span>
+            <span class="patent-number">No. {patent.application}</span>
+          </p>
+          {patentSubTitle(patent) && <p class="patent-alt-title">{patentSubTitle(patent)}</p>}
         </article>
       ))}
     </div>
-  </div>
-  <div>
-    <SectionHeading id="awards" title="Awards" subtitle="Selected honors and talks" />
+  </section>
+  <section class="section-block" aria-labelledby="awards-heading">
+    <SectionHeading id="awards" title="Awards" />
     <div class="compact-card content-card">
       {awards.map((award) => (
         <article>
@@ -48,5 +80,5 @@ const { patents, awards } = Astro.props;
         </article>
       ))}
     </div>
-  </div>
-</section>
+  </section>
+</div>

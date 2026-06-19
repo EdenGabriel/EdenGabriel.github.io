@@ -10,8 +10,6 @@ const { id, title, subtitle } = Astro.props;
 
 <div class="section-heading" id={id}>
   <div>
-    <p class="section-kicker">{id.replace("-", " ")}</p>
-    <h2>{title}</h2>
+    <h2 id={`${id}-heading`}>{title}</h2>
   </div>
-  {subtitle && <p>{subtitle}</p>}
 </div>

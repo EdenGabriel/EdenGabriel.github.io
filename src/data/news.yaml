@@ -1,55 +1,86 @@
+- date: "2026-06"
+  type: paper
+  icon: "🎉"
+  title: Two papers accepted by IROS2026.
+  links:
+    - label: RVAF
+      url: https://jinyang.website/RVAF/
+    - label: D6SR
+      url: http://xhslink.com/o/Al4JcBwgRmG
+
+- date: "2026-05"
+  type: milestone
+  icon: "⭐"
+  title: 我完成了我的博士毕业答辩。
+
+- date: "2026-02"
+  type: paper
+  icon: "🎉"
+  title: One paper accepted by ICRA2026.
+  links:
+    - label: WaveComm
+      url: https://arxiv.org/abs/2603.13365
+
 - date: "2025-12"
   type: paper
+  icon: "🎉"
   title: One paper accepted by IEEE Transactions on Multimedia.
-  link:
-    label: Video Temporal Grounding
-    url: https://github.com/EdenGabriel/VABooster
+  links:
+    - label: Video Temporal Grounding
+      url: https://github.com/EdenGabriel/VABooster
 
 - date: "2025-09"
   type: paper
+  icon: "🎉"
   title: One paper accepted by Pattern Recognition.
-  link:
-    label: Video Temporal Grounding
-    url: https://github.com/EdenGabriel/UPM
+  links:
+    - label: Video Temporal Grounding
+      url: https://github.com/EdenGabriel/UPM
 
 - date: "2025-06"
   type: talk
+  icon: "⭐"
   title: Invited speaker at ICCIR 2025, delivering an oral presentation on video multimodal learning.
-  link:
-    label: ICCIR 2025
-    url: https://www.ic-cir.org/
+  links:
+    - label: ICCIR 2025
+      url: https://www.ic-cir.org/
 
 - date: "2025-06"
   type: award
+  icon: "🏆"
   title: Winner of the First Prize in the CVPR2025 Robotwin Dual-Arm Collaboration Challenge (Real-World Track).
-  link:
-    label: Robotwin Challenge
-    url: https://robotwin-benchmark.github.io/cvpr-2025-challenge/
+  links:
+    - label: Robotwin Challenge
+      url: https://robotwin-benchmark.github.io/cvpr-2025-challenge/
 
 - date: "2025-05"
   type: award
+  icon: "🏆"
   title: Winner of the Second Prize in the CVPR2025 Robotwin Dual-Arm Collaboration Challenge (Simulation Round1).
-  link:
-    label: Robotwin Challenge
-    url: https://robotwin-benchmark.github.io/cvpr-2025-challenge/
+  links:
+    - label: Robotwin Challenge
+      url: https://robotwin-benchmark.github.io/cvpr-2025-challenge/
 
 - date: "2024-02"
   type: paper
+  icon: "🎉"
   title: One paper accepted at CVPR 2024.
-  link:
-    label: Video Temporal Grounding
-    url: https://github.com/EdenGabriel/TaskWeave
+  links:
+    - label: Video Temporal Grounding
+      url: https://github.com/EdenGabriel/TaskWeave
 
 - date: "2023-10"
   type: paper
+  icon: "🎉"
   title: One paper accepted by IEEE Transactions on Multimedia.
-  link:
-    label: Video Temporal Action Localization
-    url: https://github.com/EdenGabriel/TransGMC
+  links:
+    - label: Video Temporal Action Localization
+      url: https://github.com/EdenGabriel/TransGMC
 
 - date: "2023-10"
   type: paper
+  icon: "🎉"
   title: One paper accepted by IEEE Transactions on Circuits and Systems for Video Technology.
-  link:
-    label: Video Temporal Action Localization
-    url: https://github.com/EdenGabriel/TFFormer
+  links:
+    - label: Video Temporal Action Localization
+      url: https://github.com/EdenGabriel/TFFormer

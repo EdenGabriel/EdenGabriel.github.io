@@ -8,6 +8,11 @@ profile:
   email: jin.y.hust@gmail.com
   lastUpdated: Jun. 18, 2026
   visitorNote: GitHub Pages visitor map
+  visitorMapScriptId: mmvst_globe
+  visitorMapScriptUrl: https://mapmyvisitors.com/globe.js?d=8A8C-aOmq71357xrcvyLVx4ffhmlh29rF1sCzhCI16s
+  visitorMapEmbedUrl: ""
+  visitorMapImage: ""
+  visitorMapUrl: ""
   links:
     - label: Email
       url: mailto:jin.y.hust@gmail.com

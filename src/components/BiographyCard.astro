@@ -1,4 +1,6 @@
 ---
+import SectionHeading from "./SectionHeading.astro";
+
 interface Props {
   biography: {
     paragraphs: string[];
@@ -9,14 +11,14 @@ interface Props {
 const { biography } = Astro.props;
 ---
 
-<section class="bio-card content-card" aria-labelledby="biography-title">
-  <div>
-    <h2 id="biography-title">Biography</h2>
-  </div>
-  <div class="bio-text">
-    {biography.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
-  </div>
-  <div class="interest-list">
-    {biography.interests.map((interest) => <span>{interest}</span>)}
+<section class="section-block" aria-labelledby="biography-heading">
+  <SectionHeading id="biography" title="Biography" />
+  <div class="bio-card content-card">
+    <div class="bio-text">
+      {biography.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+    <div class="interest-list">
+      {biography.interests.map((interest) => <span>{interest}</span>)}
+    </div>
   </div>
 </section>

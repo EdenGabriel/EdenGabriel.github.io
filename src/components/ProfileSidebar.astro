@@ -16,11 +16,27 @@ interface Props {
     email: string;
     lastUpdated: string;
     visitorNote: string;
+    visitorMapScriptId?: string;
+    visitorMapScriptUrl?: string;
+    visitorMapEmbedUrl?: string;
+    visitorMapImage?: string;
+    visitorMapUrl?: string;
     links: LinkItem[];
   };
 }
 
 const { profile } = Astro.props;
+
+const visitorMapScriptHtml = profile.visitorMapScriptUrl
+  ? `<script type="text/javascript" id="${profile.visitorMapScriptId || "mapmyvisitors"}" src="${profile.visitorMapScriptUrl}"></script>`
+  : "";
+
+const iconGlyph: Record<string, string> = {
+  Mail: "@",
+  Scholar: "GS",
+  GitHub: "GH",
+  CSDN: "C",
+};
 ---
 
 <aside class="profile-panel">
@@ -37,24 +53,54 @@ const { profile } = Astro.props;
     {
       profile.links.map((link) => (
         <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined} rel={link.url.startsWith("http") ? "noreferrer" : undefined}>
-          <span>{link.icon}</span>
+          <span aria-hidden="true">{iconGlyph[link.icon] ?? link.icon.slice(0, 2)}</span>
           {link.label}
         </a>
       ))
     }
   </div>
 
-  <div class="visitor-card" aria-label="Visitor map preview">
-    <div class="visitor-map">
-      <span class="continent c1"></span>
-      <span class="continent c2"></span>
-      <span class="continent c3"></span>
-      <span class="continent c4"></span>
-      <span class="pin p1"></span>
-      <span class="pin p2"></span>
-      <span class="pin p3"></span>
-      <span class="pin p4"></span>
-    </div>
+  <div class="visitor-card" aria-label="Visitor map">
+    {profile.visitorMapScriptUrl ? (
+      <div class="visitor-map-script" set:html={visitorMapScriptHtml} />
+    ) : profile.visitorMapEmbedUrl ? (
+      <iframe class="visitor-map-frame" src={profile.visitorMapEmbedUrl} title="Visitor map" loading="lazy"></iframe>
+    ) : profile.visitorMapImage ? (
+      profile.visitorMapUrl ? (
+        <a class="visitor-map-link" href={profile.visitorMapUrl} target="_blank" rel="noreferrer">
+          <img class="visitor-map-image" src={profile.visitorMapImage} alt="Visitor map" loading="lazy" />
+        </a>
+      ) : (
+        <img class="visitor-map-image" src={profile.visitorMapImage} alt="Visitor map" loading="lazy" />
+      )
+    ) : (
+      <div class="visitor-map-empty">
+        <svg viewBox="0 0 260 126" role="img" aria-label="Visitor map placeholder">
+          <text class="visitor-map-title" x="8" y="16">Visitors</text>
+          <g class="visitor-world">
+            <path d="M42 42c13-10 27-10 39-4 8 4 16 4 24 2 7-2 13 2 16 8-17 8-31 11-48 8-8-2-19 2-31 11-10-5-11-17 0-25Z" />
+            <path d="M125 35c16-5 39-5 53 3 11 7 9 20-4 26-12 6-25 4-37 0-10-4-21-2-31 2-6-13 2-26 19-31Z" />
+            <path d="M171 65c12-4 30-1 41 7 10 8 9 20-3 25-14 6-33 4-47-4-11-7-8-23 9-28Z" />
+            <path d="M101 72c13-4 29-2 37 7 8 9 3 22-10 27-14 5-32 1-41-8-9-10-2-22 14-26Z" />
+          </g>
+          <g class="visitor-dots">
+            <circle cx="63" cy="51" r="2.5" />
+            <circle cx="82" cy="58" r="2.3" />
+            <circle cx="136" cy="50" r="3.2" />
+            <circle cx="149" cy="57" r="2.6" />
+            <circle cx="174" cy="75" r="2.8" />
+            <circle cx="192" cy="84" r="2.4" />
+            <circle cx="211" cy="82" r="2.4" />
+            <circle cx="111" cy="87" r="2.2" />
+            <circle cx="221" cy="58" r="2.2" />
+          </g>
+          <text class="visitor-stat" x="8" y="108">Today --</text>
+          <text class="visitor-divider" x="64" y="108">|</text>
+          <text class="visitor-stat" x="78" y="108">Total --</text>
+          <text class="visitor-note" x="8" y="122">* Map updates daily</text>
+        </svg>
+      </div>
+    )}
     <p>{profile.visitorNote}</p>
   </div>
 

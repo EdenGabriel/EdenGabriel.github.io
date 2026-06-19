@@ -9,7 +9,9 @@ interface LinkItem {
 interface Publication {
   title: string;
   authors: string;
+  my_role?: string;
   status?: string;
+  venue_under_review?: string;
   venue: string;
   venueShort?: string;
   image: string;
@@ -23,43 +25,78 @@ interface PublicationYear {
 
 interface Props {
   groups: PublicationYear[];
+  scholarUrl?: string;
 }
 
-const { groups } = Astro.props;
+const { groups, scholarUrl } = Astro.props;
+
+const papers = groups.flatMap((group) => group.items.map((paper) => ({ ...paper, year: group.year })));
+const hiddenLinkLabels = new Set(["bibtex", "related project"]);
+
+const visibleLinks = (links: LinkItem[] = []) =>
+  links.filter((link) => !hiddenLinkLabels.has(link.label.toLowerCase()));
+
+const venueText = (paper: Publication) =>
+  paper.venueShort ? `${paper.venue} (${paper.venueShort})` : paper.venue;
+
+const reviewStatus = (paper: Publication) => paper.venue_under_review || paper.status;
+
+const renderAuthors = (authors: string) =>
+  authors.split(",").map((author) => {
+    const name = author.trim();
+    return {
+      name,
+      isMe: name === "Jin Yang",
+    };
+  });
+
+const escapeHtml = (value: string) =>
+  value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+
+const renderAuthorsHtml = (authors: string) =>
+  renderAuthors(authors)
+    .map((author) => {
+      const name = escapeHtml(author.name);
+      return author.isMe ? `<strong class="author-me">${name}</strong>` : name;
+    })
+    .join(", ");
 ---
 
 <section class="section-block" aria-labelledby="publications-heading">
-  <SectionHeading id="publications" title="Publications" subtitle="Selected publications grouped by year" />
+  <SectionHeading id="publications" title="Publications" />
   <div class="publication-list content-card">
+    <p class="publications-note">
+      Selected Publications. The list may not be up-to-date. Please find my latest publications on
+      {scholarUrl ? <a href={scholarUrl} target="_blank" rel="noreferrer">Google Scholar</a> : "Google Scholar"}.
+    </p>
     {
-      groups.map((group) => (
-        <section class="publication-year">
-          <div class="year-badge">{group.year}</div>
-          <div class="publication-items">
-            {
-              group.items.map((paper) => (
-                <article class="publication-item">
-                  <a class="publication-thumb" href={paper.links?.[0]?.url || "#"} target={paper.links?.[0]?.url?.startsWith("http") ? "_blank" : undefined} rel={paper.links?.[0]?.url?.startsWith("http") ? "noreferrer" : undefined}>
-                    <img src={paper.image} alt={`${paper.title} thumbnail`} loading="lazy" />
-                  </a>
-                  <div class="publication-body">
-                    <div class="paper-meta-line">
-                      {paper.status && <span class="status-tag">{paper.status}</span>}
-                      <span>{paper.venueShort || paper.venue}</span>
-                    </div>
-                    <h3>{paper.title}</h3>
-                    <p>{paper.authors}</p>
-                    <div class="paper-links">
-                      {paper.links.map((link) => (
-                        <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined} rel={link.url.startsWith("http") ? "noreferrer" : undefined}>{link.label}</a>
-                      ))}
-                    </div>
-                  </div>
-                </article>
-              ))
-            }
+      papers.map((paper) => (
+        <article class="publication-item">
+          <a class="publication-thumb" href={visibleLinks(paper.links)?.[0]?.url || "#"} target={visibleLinks(paper.links)?.[0]?.url?.startsWith("http") ? "_blank" : undefined} rel={visibleLinks(paper.links)?.[0]?.url?.startsWith("http") ? "noreferrer" : undefined}>
+            <img src={paper.image} alt={`${paper.title} thumbnail`} loading="lazy" />
+          </a>
+          <div class="publication-body">
+            <h3>{paper.title}</h3>
+            <p class="paper-authors" set:html={renderAuthorsHtml(paper.authors)} />
+            <p class="paper-venue">
+              <span>{venueText(paper)}</span>
+              {paper.my_role && <span class="paper-role-badge">{paper.my_role}</span>}
+            </p>
+            {(reviewStatus(paper) || visibleLinks(paper.links).length > 0) && (
+              <div class="paper-links">
+                {reviewStatus(paper) && <span class="paper-status-badge">{reviewStatus(paper)}</span>}
+                {visibleLinks(paper.links).map((link) => (
+                  <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined} rel={link.url.startsWith("http") ? "noreferrer" : undefined}>{link.label}</a>
+                ))}
+              </div>
+            )}
           </div>
-        </section>
+        </article>
       ))
     }
   </div>

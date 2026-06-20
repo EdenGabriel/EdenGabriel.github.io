@@ -37,10 +37,9 @@ const itemLinks = (item: NewsItem) => item.links ?? (item.link ? [item.link] : [
       {
         news.map((item) => (
           <li class="news-item">
-            {item.icon && <span class="news-icon" aria-hidden="true">{item.icon}</span>}
             <time class={`news-date ${item.type ?? "general"}`} datetime={item.date}>{formatDate(item.date)}</time>
             <p>
-              {item.title}
+              <span set:html={item.title} />
               {itemLinks(item).length > 0 && (
                 <>
                   {" "}

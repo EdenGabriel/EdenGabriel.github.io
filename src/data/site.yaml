@@ -32,8 +32,8 @@ navigation:
     href: "#biography"
   - label: News
     href: "#news"
-  - label: Researches
-    href: "#researches"
+  # - label: Researches
+  #   href: "#researches"
   - label: Publications
     href: "#publications"
   - label: Patents
@@ -45,14 +45,22 @@ navigation:
 
 biography:
   paragraphs:
-    - I am a Ph.D. student in the Institute of Artificial Intelligence and Robotics (IAIR) at Xi'an Jiaotong University, supervised by Prof. Ping Wei. I received my M.S. degree from Huazhong University of Science and Technology, supervised by Assoc. Prof. Gang Peng.
-    - My research interests focus on robotics, embodied intelligence, multimodal learning, and video understanding. I aspire to develop AI technologies that genuinely benefit society.
+    - >
+      Hi, I am Jin Yang. I received my Ph.D. degree in June 2026 from the
+      Institute of Artificial Intelligence and Robotics (IAIR) at Xi'an
+      Jiaotong University. I was supervised by
+      <a href="https://gr.xjtu.edu.cn/pingwei/" target="_blank" rel="noopener noreferrer">Prof. Ping Wei</a>.
+    - >
+      My research mainly focuses on <strong>Multimodal Learning</strong>. I am interested in effective representation, fusion, and
+      reasoning methods for multimodal information. My current goal is to
+      build intelligent models and robotic systems that can perceive multimodal
+      signals and make reliable decisions.
     - Welcome to contact me for any discussion and cooperation.
   interests:
-    - Robotics
-    - Embodied Intelligence
     - Multimodal Learning
-    - Video Understanding
+    - Robotics & Embodied Intelligence
+    - Reinforcement Learning
+
 
 research:
   title: Multimodal Intelligence for Embodied Systems

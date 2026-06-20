@@ -15,7 +15,7 @@ const { biography } = Astro.props;
   <SectionHeading id="biography" title="Biography" />
   <div class="bio-card content-card">
     <div class="bio-text">
-      {biography.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      {biography.paragraphs.map((paragraph) => <p set:html={paragraph} />)}
     </div>
     <div class="interest-list">
       {biography.interests.map((interest) => <span>{interest}</span>)}

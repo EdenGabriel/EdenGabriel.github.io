@@ -1,6 +1,5 @@
 - date: "2026-06"
   type: paper
-  icon: "🎉"
   title: Two papers accepted by IROS2026.
   links:
     - label: RVAF
@@ -10,12 +9,10 @@
 
 - date: "2026-05"
   type: milestone
-  icon: "⭐"
-  title: 我完成了我的博士毕业答辩。
+  title: <strong>I successfully defended my Ph.D. dissertation.</strong>
 
 - date: "2026-02"
   type: paper
-  icon: "🎉"
   title: One paper accepted by ICRA2026.
   links:
     - label: WaveComm
@@ -23,23 +20,20 @@
 
 - date: "2025-12"
   type: paper
-  icon: "🎉"
   title: One paper accepted by IEEE Transactions on Multimedia.
   links:
-    - label: Video Temporal Grounding
+    - label: VABooster
       url: https://github.com/EdenGabriel/VABooster
 
 - date: "2025-09"
   type: paper
-  icon: "🎉"
   title: One paper accepted by Pattern Recognition.
   links:
-    - label: Video Temporal Grounding
+    - label: UPM
       url: https://github.com/EdenGabriel/UPM
 
 - date: "2025-06"
   type: talk
-  icon: "⭐"
   title: Invited speaker at ICCIR 2025, delivering an oral presentation on video multimodal learning.
   links:
     - label: ICCIR 2025
@@ -47,7 +41,6 @@
 
 - date: "2025-06"
   type: award
-  icon: "🏆"
   title: Winner of the First Prize in the CVPR2025 Robotwin Dual-Arm Collaboration Challenge (Real-World Track).
   links:
     - label: Robotwin Challenge
@@ -55,7 +48,6 @@
 
 - date: "2025-05"
   type: award
-  icon: "🏆"
   title: Winner of the Second Prize in the CVPR2025 Robotwin Dual-Arm Collaboration Challenge (Simulation Round1).
   links:
     - label: Robotwin Challenge
@@ -63,24 +55,21 @@
 
 - date: "2024-02"
   type: paper
-  icon: "🎉"
   title: One paper accepted at CVPR 2024.
   links:
-    - label: Video Temporal Grounding
+    - label: TaskWeave
       url: https://github.com/EdenGabriel/TaskWeave
 
 - date: "2023-10"
   type: paper
-  icon: "🎉"
   title: One paper accepted by IEEE Transactions on Multimedia.
   links:
-    - label: Video Temporal Action Localization
+    - label: TransGMC
       url: https://github.com/EdenGabriel/TransGMC
 
 - date: "2023-10"
   type: paper
-  icon: "🎉"
   title: One paper accepted by IEEE Transactions on Circuits and Systems for Video Technology.
   links:
-    - label: Video Temporal Action Localization
+    - label: TFFormer
       url: https://github.com/EdenGabriel/TFFormer

@@ -1,35 +1,31 @@
-- title: HyperMVP
-  subtitle: Hyperbolic Multiview Pretraining for Generalizable Robotic Manipulation
-  category: Robotics
-  image: /assets/papers/submission-cvpr2026.png
-  summary: Multiview pretraining for robotic manipulation with geometry-aware representation learning.
-  links:
-    - label: Website
-      url: https://blien2002.github.io/HyperMVP/
-
-- title: RVAF
-  subtitle: Multi-Task Robotic Manipulation
-  category: Robotics
-  image: /assets/papers/submission-icra2026.png
-  summary: Multi-task robotic manipulation system for robust perception and action under embodied settings.
-  links:
-    - label: Website
-      url: https://anonymous.4open.science/w/RVAF-Anonymization
-
-- title: WebUI-MR&HD
-  subtitle: Moment Retrieval and Highlight Detection System
+- title: WebUI for Joint Video Moment Retrieval and Highlight Detection
   category: Video Understanding
-  image: /assets/papers/cvpr2024-taskweave.gif
-  summary: A web interface for video-language temporal grounding, moment retrieval, and highlight detection demos.
-  links:
-    - label: Related Publications
-      url: "#publications"
+  year: "2024"
+  image: /assets/projects/webui-mrhd-poster.jpg
+  summary: A WebUI for video moment retrieval and highlight detection. It retrieves moments of interest from long untrimmed videos and supports zero-shot adaptation to open-set content.
+  media:
+    - type: video
+      src: /assets/projects/webui-mrhd.web.mp4
+      poster: /assets/projects/webui-mrhd-poster.jpg
+      label: WebUI demo
+  links: []
 
-- title: Deep Reinforcement Learning for Robot Planning
-  subtitle: Dense reward and stage incentive mechanisms
+- title: Deep Reinforcement Learning for Robotic Manipulator Motion Planning
   category: Planning
+  year: "2021"
+  featured: true
   image: /assets/projects/drl.png
-  summary: Reinforcement learning systems for robotic trajectory planning and intelligent cleaning robot path planning.
-  links:
-    - label: Publications
-      url: "#publications"
+  summary: This is a DRL-based robotic manipulator motion planning system for simulated-real scenarios. The two demos show dynamic target scenarios without and with obstacles, and the framework image summarizes the planning system.
+  media:
+    - type: image
+      src: /assets/projects/drl.png
+      label: System framework
+    - type: video
+      src: /assets/projects/drl_task1.web.mp4
+      poster: /assets/projects/drl_task1-poster.jpg
+      label: Dynamic target without obstacles
+    - type: video
+      src: /assets/projects/drl_task2.web.mp4
+      poster: /assets/projects/drl_task2-poster.jpg
+      label: Dynamic target with obstacles
+  links: []

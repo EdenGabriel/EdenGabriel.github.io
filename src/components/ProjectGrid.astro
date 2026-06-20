@@ -6,13 +6,23 @@ interface LinkItem {
   url: string;
 }
 
+interface MediaItem {
+  type: "image" | "video";
+  src: string;
+  label: string;
+  poster?: string;
+}
+
 interface Project {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   category: string;
-  image: string;
+  year?: string;
+  featured?: boolean;
+  image?: string;
   summary: string;
-  links: LinkItem[];
+  links?: LinkItem[];
+  media?: MediaItem[];
 }
 
 interface Props {
@@ -20,6 +30,9 @@ interface Props {
 }
 
 const { projects } = Astro.props;
+
+const projectImage = (project: Project) => project.media?.find((item) => item.type === "image");
+const projectVideos = (project: Project) => project.media?.filter((item) => item.type === "video") ?? [];
 ---
 
 <section class="section-block" aria-labelledby="projects-heading">
@@ -27,19 +40,62 @@ const { projects } = Astro.props;
   <div class="project-grid">
     {
       projects.map((project) => (
-        <article class="project-card">
-          <img src={project.image} alt={`${project.title} preview`} loading="lazy" />
-          <div>
-            <span>{project.category}</span>
-            <h3>{project.title}</h3>
-            <p class="project-subtitle">{project.subtitle}</p>
-            <p>{project.summary}</p>
-            <div class="project-links">
-              {project.links.map((link) => (
-                <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined} rel={link.url.startsWith("http") ? "noreferrer" : undefined}>{link.label}</a>
-              ))}
-            </div>
-          </div>
+        <article class:list={["project-card", { "is-featured": project.featured, "has-video": !project.featured && projectVideos(project).length }]}>
+          {project.featured ? (
+            <>
+              {projectImage(project) && (
+                <figure class="project-media project-framework-media">
+                  <img src={projectImage(project)?.src} alt={projectImage(project)?.label} loading="lazy" />
+                  <figcaption>{projectImage(project)?.label}</figcaption>
+                </figure>
+              )}
+              <div class="project-featured-copy">
+                <div class="project-title-row">
+                  <h3>{project.title}</h3>
+                  {project.year && <time class="project-year" datetime={project.year}>{project.year}</time>}
+                </div>
+                <p>{project.summary}</p>
+                <div class="project-video-row">
+                  {projectVideos(project).map((item) => (
+                    <figure class="project-media is-video">
+                      <video controls preload="auto" playsinline poster={item.poster} aria-label={item.label}>
+                        <source src={item.src} type="video/mp4" />
+                      </video>
+                      <figcaption>{item.label}</figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              {projectVideos(project).length ? (
+                <figure class="project-media project-card-video">
+                  <video controls preload="auto" playsinline poster={projectVideos(project)[0].poster} aria-label={projectVideos(project)[0].label}>
+                    <source src={projectVideos(project)[0].src} type="video/mp4" />
+                  </video>
+                  <figcaption>{projectVideos(project)[0].label}</figcaption>
+                </figure>
+              ) : (
+                project.image && <img class="project-thumb" src={project.image} alt={`${project.title} preview`} loading="lazy" />
+              )}
+              <div class="project-card-content">
+                <div class="project-title-row">
+                  <h3>{project.title}</h3>
+                  {project.year && <time class="project-year" datetime={project.year}>{project.year}</time>}
+                </div>
+                {project.subtitle && <p class="project-subtitle">{project.subtitle}</p>}
+                <p>{project.summary}</p>
+                {project.links?.length ? (
+                  <div class="project-links">
+                    {project.links.map((link) => (
+                      <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined} rel={link.url.startsWith("http") ? "noreferrer" : undefined}>{link.label}</a>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+            </>
+          )}
         </article>
       ))
     }

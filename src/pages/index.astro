@@ -6,7 +6,7 @@ import NewsPanel from "@components/NewsPanel.astro";
 import ProfileSidebar from "@components/ProfileSidebar.astro";
 import ProjectGrid from "@components/ProjectGrid.astro";
 import PublicationsSection from "@components/PublicationsSection.astro";
-import ResearchSection from "@components/ResearchSection.astro";
+// import ResearchSection from "@components/ResearchSection.astro";
 import TopNav from "@components/TopNav.astro";
 import { readData } from "@lib/data";
 
@@ -28,13 +28,10 @@ const scholarLink = site.profile.links.find((link: any) => link.label === "Googl
         <BiographyCard biography={site.biography} />
         <NewsPanel news={news} />
       </div>
-      <ResearchSection research={site.research} />
+      <!-- <ResearchSection research={site.research} /> -->
       <PublicationsSection groups={publications} scholarUrl={scholarLink} />
       <CompactLists patents={patents} awards={awards} />
       <ProjectGrid projects={projects} />
-      <footer class="site-footer">
-        <p>Built with Astro. Content lives in YAML files for easier academic updates.</p>
-      </footer>
     </div>
   </main>
 </BaseLayout>

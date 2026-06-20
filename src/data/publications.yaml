@@ -8,6 +8,8 @@
       links:
         - label: Project Website
           url: https://jinyang.website/RVAF/
+        - label: Video Demo
+          url: http://xhslink.com/o/31XbJDRrXQ7
 
     - title: A Mechanically Decoupled Six-Axis Spherical Rolling Robot For Stable Propeller-Driven Rolling
       authors: Xijian Deng, Leqi Ding, Jiayi Chen, Ping Wei, Jin Yang 
@@ -20,7 +22,7 @@
           url: http://xhslink.com/o/Al4JcBwgRmG
 
     - title: Lightweight Communication for Collaborative Perception via Wavelet Feature Distillation
-      authors: Erdemt Bao, Jin Yang
+      authors: Jin Yang, Erdemt Bao
       my_role: Co-first author & Project leader
       venue: IEEE International Conference on Robotics & Automation
       venueShort: ICRA 2026
@@ -30,6 +32,8 @@
           url: https://arxiv.org/abs/2603.13365
         - label: Code
           url: https://github.com/erdemtbao/WaveComm
+        - label: Video Demo
+          url: http://xhslink.com/o/5nBR2Rwl0wK 
 
     - title: Hyperbolic Multiview Pretraining for Robotic Manipulation
       authors: Jin Yang, Ping Wei, Yixin Chen

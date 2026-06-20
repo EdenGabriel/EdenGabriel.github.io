@@ -13,15 +13,15 @@ interface Props {
   navigation: NavItem[];
 }
 
-const { profile, navigation } = Astro.props;
+const { navigation } = Astro.props;
 ---
 
 <header class="top-nav">
-  <a class="brand" href="#biography" aria-label="Back to Biography">
-    <span class="brand-mark">JY</span>
-    <span>
-      <strong>{profile.name} / {profile.chineseName}</strong>
-      <small>{profile.title} · Robotics · Multimodal Learning</small>
+  <a class="brand" href="#biography" aria-label="Xi'an Jiaotong University, College of Artificial Intelligence, IAIR">
+    <span class="brand-logo-group">
+      <img class="brand-emblem xjtu-seal" src="/assets/brand/xjtu-seal-original.png" alt="Xi'an Jiaotong University seal" />
+      <img class="brand-emblem cai-seal" src="/assets/brand/cai-seal-original.png" alt="College of Artificial Intelligence seal" />
+      <img class="brand-emblem iair-mark" src="/assets/brand/iair-original.png" alt="IAIR Est. 1986 logo" />
     </span>
   </a>
   <nav aria-label="Primary navigation">

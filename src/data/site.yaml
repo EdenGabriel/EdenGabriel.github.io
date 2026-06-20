@@ -1,15 +1,15 @@
 profile:
   name: Jin Yang
   chineseName: 杨进
-  title: Ph.D. Candidate
+  title: Dr.
   affiliation: Institute of Artificial Intelligence and Robotics, Xi'an Jiaotong University
   location: Xi'an, China
   avatar: /assets/profile/me.jpg
   email: jin.y.hust@gmail.com
   lastUpdated: Jun. 18, 2026
   visitorNote: GitHub Pages visitor map
-  visitorMapScriptId: mmvst_globe
-  visitorMapScriptUrl: https://mapmyvisitors.com/globe.js?d=8A8C-aOmq71357xrcvyLVx4ffhmlh29rF1sCzhCI16s
+  visitorMapScriptId: mapmyvisitors
+  visitorMapScriptUrl: https://mapmyvisitors.com/map.js?cl=16488f&w=250&t=n&d=4_KM37ASIlgsuQW4qR6s2JrUBG86nq22BwpFgKaWB7w&co=ffffff&ct=808080&cmo=ffb800&cmn=00d900
   visitorMapEmbedUrl: ""
   visitorMapImage: ""
   visitorMapUrl: ""

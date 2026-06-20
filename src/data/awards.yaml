@@ -1,11 +1,50 @@
-- date: "2025-06"
-  title: First Prize, CVPR2025 Robotwin Dual-Arm Collaboration Challenge
-  detail: Real-World Track
+- title: National Scholarship for Doctoral Students
+  year: "2025"
+  font_bold: true
 
-- date: "2025-05"
-  title: Second Prize, CVPR2025 Robotwin Dual-Arm Collaboration Challenge
-  detail: Simulation Round1
+- title: '"Hu Baosheng" Outstanding Student Scholarship'
+  year: "2025"
+  font_bold: true
+  note: Rank 1, Speech by the Student Representative
+  url: https://news.xjtu.edu.cn/info/1033/225721.htm
 
-- date: "2025-06"
-  title: Invited Speaker at ICCIR 2025
-  detail: Oral presentation on video multimodal learning
+- title: Honor of Excellent Postgraduate at University Level
+  year: "2023"
+
+- title: Huawei Scholarship
+  year: "2021"
+
+- title: Honor of Merit Postgraduate at University Level
+  year: "2020"
+
+- title: First Prize of Scholarship at University Level
+  year: "2020/2017/2016"
+
+- title: Shenzhen Stock Exchange Scholarship
+  year: "2020"
+
+- title: Third Prize of World Robot Contest (Trico-Robot Challenge)
+  year: "2019"
+  font_bold: true
+  note: Rank 2
+  url: "#projects"
+
+- title: Third Prize of National College Student Robot Contest (Robocon)
+  year: "2018"
+  note: Rank 1, Team Leader
+
+- title: Second Prize of USA Undergraduate Mathematical Modeling Contest
+  year: "2018"
+  note: Rank 1
+
+- title: First Prize of National Undergraduate IoT Design Contest
+  year: "2017"
+  note: Rank 1
+
+- title: First Prize of Tianjin Undergraduate Robot Contest (Robot Creative Design)
+  year: "2017"
+  note: Rank 1
+
+- title: Tianjin Undergraduate Innovation and Entrepreneurship project
+  year: "2017"
+  note: Host

@@ -13,9 +13,11 @@ interface Patent {
 }
 
 interface Award {
-  date: string;
+  year: string;
   title: string;
-  detail: string;
+  font_bold?: boolean;
+  note?: string;
+  url?: string;
 }
 
 interface Props {
@@ -49,6 +51,8 @@ const patentMainTitle = (patent: Patent) =>
 
 const patentSubTitle = (patent: Patent) =>
   patent.language === "en" ? patent.title_zh : patent.title_en;
+
+const isExternalUrl = (url: string) => url.startsWith("http");
 ---
 
 <div class="compact-stack">
@@ -71,14 +75,21 @@ const patentSubTitle = (patent: Patent) =>
   </section>
   <section class="section-block" aria-labelledby="awards-heading">
     <SectionHeading id="awards" title="Awards" />
-    <div class="compact-card content-card">
-      {awards.map((award) => (
-        <article>
-          <span>{award.date}</span>
-          <h3>{award.title}</h3>
-          <p>{award.detail}</p>
-        </article>
-      ))}
+    <div class="awards-card content-card">
+      <ul class="awards-list">
+        {awards.map((award) => (
+          <li class="award-item">
+            {award.url ? (
+              <a class:list={["award-title", { "is-bold": award.font_bold }]} href={award.url} target={isExternalUrl(award.url) ? "_blank" : undefined} rel={isExternalUrl(award.url) ? "noreferrer" : undefined}>
+                {award.year} {award.title}
+              </a>
+            ) : (
+              <span class:list={["award-title", { "is-bold": award.font_bold }]}>{award.year} {award.title}</span>
+            )}
+            {award.note && <strong class="award-note">{award.note}</strong>}
+          </li>
+        ))}
+      </ul>
     </div>
   </section>
 </div>

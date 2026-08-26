@@ -1,5 +1,15 @@
-- year: 2025
+# Add category: survey for survey papers. Other papers are grouped by year.
+- year: 2026
   items:
+    - title: Embodied Robot Manipulation in the Era of Foundation Models--Planning and Learning Perspectives
+      category: survey
+      authors: Shuanghao Bai, Wenxuan Song, Jiayi Chen, Yuheng Ji, Zhide Zhong, Jin Yang, Han Zhao, Wanqi Zhou, Li Zhe, Pengxiang Ding, Cheng Chi, Chang Xu, Xiaolong Zheng, Donglin Wang, Haoang Li, Shanghang Zhang, Badong Chen
+      venue: IEEE Transactions on Robotics
+      venueShort: TRO 2026
+      links:
+        - label: Paper
+          url: https://arxiv.org/abs/2512.22983
+
     - title: Differential Amplifier-Inspired AmpAttention for Multi-View Robotic Manipulation
       authors: Jin Yang, Ping Wei, Nanning Zheng
       venue: IEEE/RSJ International Conference on Intelligent Robots and Systems
@@ -46,6 +56,8 @@
         - label: Project Website
           url: https://blien2002.github.io/HyperMVP/
 
+- year: 2025
+  items:
     - title: Learning Visual-Audio Dissonance for Moment Retrieval and Highlight Detection
       authors: Jin Yang, Ping Wei, Nanning Zheng
       venue: IEEE Transactions on Multimedia

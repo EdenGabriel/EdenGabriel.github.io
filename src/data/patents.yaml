@@ -1,4 +1,27 @@
 - type: CN Patent
+  date: "2026.08"
+  inventors:
+    - 魏平
+    - 杨进
+    - 陈一鑫
+    - 郑南宁
+  title_zh: 基于混合几何表征预训练的机械臂泛化操作方法及系统
+  title_en: Method and system for generalizable robotic arm manipulation based on hybrid geometric representation pretraining
+  application: "2025120549575"
+  language: zh
+
+
+- type: CN Patent
+  date: "2026.08"
+  inventors:
+    - 魏平
+    - 杨进
+  title_zh: 基于差分注意力的多视角机械臂操作方法及系统
+  title_en: Method and system for multi-view robotic arm manipulation based on differential attention
+  application: "2025120550110"
+  language: zh
+
+- type: CN Patent
   date: "2025.10"
   inventors:
     - 魏平

@@ -8,19 +8,26 @@ interface LinkItem {
 
 interface Publication {
   title: string;
+  category?: "survey" | "research";
   authors: string;
   my_role?: string;
   status?: string;
   venue_under_review?: string;
-  venue: string;
+  venue: string | number;
   venueShort?: string;
-  image: string;
-  links: LinkItem[];
+  image?: string;
+  links?: LinkItem[];
 }
 
 interface PublicationYear {
   year: number;
   items: Publication[];
+}
+
+interface PublicationCategory {
+  id: string;
+  title: string;
+  groups: { year?: number; items: Publication[] }[];
 }
 
 interface Props {
@@ -30,7 +37,28 @@ interface Props {
 
 const { groups, scholarUrl } = Astro.props;
 
-const papers = groups.flatMap((group) => group.items.map((paper) => ({ ...paper, year: group.year })));
+const surveys = groups.flatMap((group) => group.items.filter((paper) => paper.category === "survey"));
+const researchGroups = groups
+  .map((group) => ({
+    year: group.year,
+    items: group.items.filter((paper) => paper.category !== "survey"),
+  }))
+  .filter((group) => group.items.length > 0)
+  .sort((a, b) => b.year - a.year);
+
+const categories: PublicationCategory[] = [
+  {
+    id: "publications-surveys",
+    title: "Survey Papers",
+    groups: surveys.length > 0 ? [{ items: surveys }] : [],
+  },
+  {
+    id: "publications-research",
+    title: "Research Papers",
+    groups: researchGroups,
+  },
+];
+
 const hiddenLinkLabels = new Set(["bibtex", "related project"]);
 
 const visibleLinks = (links: LinkItem[] = []) =>
@@ -75,28 +103,52 @@ const renderAuthorsHtml = (authors: string) =>
       {scholarUrl ? <a href={scholarUrl} target="_blank" rel="noreferrer">Google Scholar</a> : "Google Scholar"}.
     </p>
     {
-      papers.map((paper) => (
-        <article class="publication-item">
-          <a class="publication-thumb" href={visibleLinks(paper.links)?.[0]?.url || "#"} target={visibleLinks(paper.links)?.[0]?.url?.startsWith("http") ? "_blank" : undefined} rel={visibleLinks(paper.links)?.[0]?.url?.startsWith("http") ? "noreferrer" : undefined}>
-            <img src={paper.image} alt={`${paper.title} thumbnail`} loading="lazy" />
-          </a>
-          <div class="publication-body">
-            <h3>{paper.title}</h3>
-            <p class="paper-authors" set:html={renderAuthorsHtml(paper.authors)} />
-            <p class="paper-venue">
-              <span>{venueText(paper)}</span>
-              {paper.my_role && <span class="paper-role-badge">{paper.my_role}</span>}
-            </p>
-            {(reviewStatus(paper) || visibleLinks(paper.links).length > 0) && (
-              <div class="paper-links">
-                {reviewStatus(paper) && <span class="paper-status-badge">{reviewStatus(paper)}</span>}
-                {visibleLinks(paper.links).map((link) => (
-                  <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined} rel={link.url.startsWith("http") ? "noreferrer" : undefined}>{link.label}</a>
-                ))}
+      categories.filter((category) => category.groups.length > 0).map((category) => (
+        <section class="publication-category" aria-labelledby={`${category.id}-heading`}>
+          <h3 class="publication-category-title" id={`${category.id}-heading`}>{category.title}</h3>
+          {category.groups.map((group) => {
+            const PaperHeading = group.year === undefined ? "h4" : "h5";
+
+            return (
+              <div class:list={["publication-group", { "publication-year-group": group.year !== undefined }]}>
+                {group.year !== undefined && (
+                  <h4 class="publication-year-heading" id={`publications-year-${group.year}`}>{group.year}</h4>
+                )}
+                {group.items.map((paper) => {
+                  const links = visibleLinks(paper.links);
+                  const primaryLink = links[0]?.url;
+                  const isExternal = primaryLink?.startsWith("http");
+
+                  return (
+                    <article class:list={["publication-item", { "publication-item--text-only": !paper.image }]}>
+                      {paper.image && (
+                        <a class="publication-thumb" href={primaryLink || "#"} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noreferrer" : undefined}>
+                          <img src={paper.image} alt={`${paper.title} thumbnail`} loading="lazy" />
+                        </a>
+                      )}
+                      <div class="publication-body">
+                        <PaperHeading class="paper-title">{paper.title}</PaperHeading>
+                        <p class="paper-authors" set:html={renderAuthorsHtml(paper.authors)} />
+                        <p class="paper-venue">
+                          <span>{venueText(paper)}</span>
+                          {paper.my_role && <span class="paper-role-badge">{paper.my_role}</span>}
+                        </p>
+                        {(reviewStatus(paper) || links.length > 0) && (
+                          <div class="paper-links">
+                            {reviewStatus(paper) && <span class="paper-status-badge">{reviewStatus(paper)}</span>}
+                            {links.map((link) => (
+                              <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined} rel={link.url.startsWith("http") ? "noreferrer" : undefined}>{link.label}</a>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </article>
+                  );
+                })}
               </div>
-            )}
-          </div>
-        </article>
+            );
+          })}
+        </section>
       ))
     }
   </div>

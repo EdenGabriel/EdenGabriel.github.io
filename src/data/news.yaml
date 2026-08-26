@@ -1,3 +1,10 @@
+- date: "2026-08"
+  type: paper
+  title: One survey paper accepted by TRO2026.
+  links:
+    - label: Embodied Robot Manipulation Survey
+      url: https://arxiv.org/abs/2512.22983
+
 - date: "2026-06"
   type: paper
   title: Two papers accepted by IROS2026.

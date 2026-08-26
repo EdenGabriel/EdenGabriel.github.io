@@ -2,7 +2,7 @@
   type: paper
   title: One survey paper accepted by IEEE Transactions on Robotics.
   links:
-    - label: Embodied Robot Manipulation Survey
+    - label: Embodied Manipulation Survey
       url: https://arxiv.org/abs/2512.22983
 
 - date: "2026-06"

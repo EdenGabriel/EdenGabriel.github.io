@@ -6,7 +6,7 @@ profile:
   location: Xi'an, China
   avatar: /assets/profile/me.jpg
   email: jin.y.hust@gmail.com
-  lastUpdated: Aug. 26, 2026
+  lastUpdated: Sep. 17, 2026
   visitorNote: GitHub Pages visitor map
   visitorMapScriptId: mapmyvisitors
   visitorMapScriptUrl: https://mapmyvisitors.com/map.js?cl=16488f&w=250&t=n&d=4_KM37ASIlgsuQW4qR6s2JrUBG86nq22BwpFgKaWB7w&co=ffffff&ct=808080&cmo=ffb800&cmn=00d900
@@ -46,7 +46,8 @@ navigation:
 biography:
   paragraphs:
     - >
-      Hi, I am Jin Yang. I received my Ph.D. degree in June 2026 from the
+      Hi, I am Jin Yang. I am currently an Assistant Professor at the College of
+      Artificial Intelligence, Xi'an Jiaotong University. I received my Ph.D. degree in June 2026 from the
       Institute of Artificial Intelligence and Robotics (IAIR) at Xi'an
       Jiaotong University. I was supervised by
       <a href="https://gr.xjtu.edu.cn/pingwei/" target="_blank" rel="noopener noreferrer">Prof. Ping Wei</a>.
